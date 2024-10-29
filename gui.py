@@ -11,14 +11,16 @@ root = Tk()
 root.title("Yakuza Cracker")
 root.geometry("800x700")
 
-# Step 3: Function to Get the Current Path to Bundled Resources (e.g., Logo, Image, ...)
+# Step 3: Function to Get the Current Path to Bundled Resources (e.g., Logo, Image, ...) for PyInstaller
 def resource_path(relative_path):
     try:
-        # get the current path which python file(gui.py) run in there
+        # if gui.py bundled with PyInstaller,
+        # to get the current path of where gui.py run in there, we should use sys._MEIPASS
         if hasattr(sys, "_MEIPASS"):
             basePath = sys._MEIPASS     # noqa
 
-        # if a python file runs in the IDE or Terminal, then get the path of the python file using __file__
+        # if a python file runs in the IDE or Console, then to get the current path of where gui.py run in there,
+        # We should use __file__ in the dirname(abspath(__file__))
         else:
             basePath = path.dirname(path.abspath(__file__))
 
