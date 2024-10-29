@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Add some doc strings">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 5: Create the Main Frame">
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,8 @@
     "RunOnceActivity.CodyProjectSettingsMigration": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -148,7 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730222133137</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement Step 4: Set the Icon for the Window">
+      <option name="closed" value="true" />
+      <created>1730223036270</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730223036270</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implement Step 5: Create the Main Frame">
+      <option name="closed" value="true" />
+      <created>1730223102908</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730223102908</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,6 +176,8 @@
     <MESSAGE value="Implement Step 2: Initialize the Main Window" />
     <MESSAGE value="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)" />
     <MESSAGE value="Add some doc strings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some doc strings" />
+    <MESSAGE value="Implement Step 4: Set the Icon for the Window" />
+    <MESSAGE value="Implement Step 5: Create the Main Frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 5: Create the Main Frame" />
   </component>
 </project>

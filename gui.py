@@ -47,8 +47,9 @@ logo = logo.resize((64, 64), Image.LANCZOS)
 logo = ImageTk.PhotoImage(logo)
 
 # Set Logo in the main gui
-root.iconphoto(False, logo)
+root.iconphoto(False, logo) # noqa
 
 """ Step 5: Create the Main Frame """
 mainFrame = ttk.Frame(root, padding="10")
 mainFrame.grid(row=0, column=0, sticky="nsew")
+mainFrame.mainloop()
