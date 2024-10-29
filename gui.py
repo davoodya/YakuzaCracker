@@ -1,4 +1,10 @@
-# Step 1: Import all Requires Libraries
+""" YakuzaCracker - an Advanced GUI Tool for Cracking ZIP, RAR and MS-Office Documents,
+    Also yakuzaCracker can Perform Reverse Bruteforce Attacks to Crack the Login Pages on the http and https.
+
+Author: Davood Yakuza from Iran, Isfahan
+Last Update: 29/10/2024 --- 8 aban 1403"""
+
+""" Step 1: Import all Requires Libraries """
 
 import sys
 
@@ -6,12 +12,12 @@ from os import path
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk
 from PIL import Image, ImageTk
 
-# Step 2: Initialize the Main Window
+""" Step 2: Initialize the Main Window """
 root = Tk()
 root.title("Yakuza Cracker")
 root.geometry("800x700")
 
-# Step 3: Function to Get the Current Path to Bundled Resources (e.g., Logo, Image, ...) for PyInstaller
+""" Step 3: Function to Get the Current Path to Bundled Resources (e.g., Logo, Image, ...) for PyInstaller """
 def resource_path(relative_path):
     try:
         # if gui.py bundled with PyInstaller,
@@ -29,5 +35,7 @@ def resource_path(relative_path):
 
     return path.join(basePath, relative_path)
 
+""" Step 4: Set the Icon for the Window """
 
+#open logo.png using resource_path()
 
