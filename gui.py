@@ -48,3 +48,7 @@ logo = ImageTk.PhotoImage(logo)
 
 # Set Logo in the main gui
 root.iconphoto(False, logo)
+
+""" Step 5: Create the Main Frame """
+mainFrame = ttk.Frame(root, padding="10")
+mainFrame.grid(row=0, column=0, sticky="nsew")
