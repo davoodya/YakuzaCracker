@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Add some doc strings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
@@ -140,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730221581433</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add some doc strings">
+      <option name="closed" value="true" />
+      <created>1730222133137</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730222133137</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +159,7 @@
     <MESSAGE value="Implement Step 1: Import all Requires Libraries" />
     <MESSAGE value="Implement Step 2: Initialize the Main Window" />
     <MESSAGE value="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)" />
+    <MESSAGE value="Add some doc strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some doc strings" />
   </component>
 </project>

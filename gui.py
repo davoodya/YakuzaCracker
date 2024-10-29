@@ -37,5 +37,14 @@ def resource_path(relative_path):
 
 """ Step 4: Set the Icon for the Window """
 
-#open logo.png using resource_path()
+# open logo.png using resource_path()
+logo = Image.open(resource_path("img/logo.png"))
 
+# resize logo.png
+logo = logo.resize((64, 64), Image.LANCZOS)
+
+# Prepare Logo image to use in the tkinter UI
+logo = ImageTk.PhotoImage(logo)
+
+# Set Logo in the main gui
+root.iconphoto(False, logo)
