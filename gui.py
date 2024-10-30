@@ -117,6 +117,9 @@ fileTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 fileTypeFrame.grid(row=1, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 
+""" Step 9: Add the brute force configuration frame """
+bruteForceFrame = ttk.Frame(mainFrame, style="TFrame")
+
 
 
 
