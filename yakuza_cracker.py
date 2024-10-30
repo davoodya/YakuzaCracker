@@ -410,6 +410,16 @@ def update_log(message):
     outputLogs.insert(END, message + '\n')
     outputLogs.see(END)
 
+# Step 12.2: Define a function to update the result log
+def update_result_log(message, success=False):
+    if success:
+        resultLogs.tag_configure("success", foreground="green")
+        resultLogs.insert(END, message + '\n', "success")
+    else:
+        resultLogs.insert(END, message + '\n')
+
+    resultLogs.see(END)
+
 
 
 
