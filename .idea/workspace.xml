@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 12.4: Define summary_results() function to summarize the results and update the log">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Fix some warnings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,30 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730218992285</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Implement Step 4: Set the Icon for the Window">
-      <option name="closed" value="true" />
-      <created>1730223036270</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1730223036270</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Implement Step 5: Create the Main Frame">
-      <option name="closed" value="true" />
-      <created>1730223102908</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1730223102908</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Implement Step 5: Create the Main Frame">
-      <option name="closed" value="true" />
-      <created>1730223682177</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1730223682177</updated>
     </task>
     <task id="LOCAL-00013" summary="add logo.png file use as GUI Icon">
       <option name="closed" value="true" />
@@ -471,7 +444,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730323103552</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Implement Step 12.5: Define clear_attack() function to clear the attack results and reset the UI">
+      <option name="closed" value="true" />
+      <created>1730324292163</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1730324292163</updated>
+    </task>
+    <task id="LOCAL-00060" summary="update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1730324303995</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1730324303996</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fix some warnings">
+      <option name="closed" value="true" />
+      <created>1730324344777</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1730324344777</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,8 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
-    <MESSAGE value="Implement Step 1: Initialize colorama for colored console output" />
     <MESSAGE value="Implement Step 2: Setup logging configuration" />
     <MESSAGE value="Implement Step 3: Define global variables" />
     <MESSAGE value="Start Developing Section 2: Developing Utility Functions" />
@@ -506,11 +501,13 @@
     <MESSAGE value="Start developing Section 3, Implement Step 12: Define a function to update the progress message" />
     <MESSAGE value="Add GUI Codes to the file begging" />
     <MESSAGE value="fix a bug" />
-    <MESSAGE value="update workspace.xml" />
     <MESSAGE value="Implement Step 12 &amp; 12.1: Define a function to update the progress message &amp; Define a function to update the main log" />
     <MESSAGE value="Implement Step 12.2: Define update_result_log() function to update the result log" />
     <MESSAGE value="Implement Step 12.3: Define update_progress_bar() function to update the progress bar and ETA Label" />
     <MESSAGE value="Implement Step 12.4: Define summary_results() function to summarize the results and update the log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 12.4: Define summary_results() function to summarize the results and update the log" />
+    <MESSAGE value="Implement Step 12.5: Define clear_attack() function to clear the attack results and reset the UI" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="Fix some warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some warnings" />
   </component>
 </project>
