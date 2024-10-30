@@ -143,6 +143,12 @@ def get_file_type(file_path):
 
 
 
+def test():
+    print(path.splitext(__file__)[1].lower())
+
+if __name__ == "__main__":
+    test()
+
 
 
 
