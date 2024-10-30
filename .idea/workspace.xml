@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 6: Define a function to try passwords on MS Office files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 8: Function to try passwords on PDF files">
       <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730316864739</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Implement Step 7: Define a function to try passwords on ZIP files">
+      <option name="closed" value="true" />
+      <created>1730317668377</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1730317668377</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Implement Step 8: Function to try passwords on PDF files">
+      <option name="closed" value="true" />
+      <created>1730317858949</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1730317858949</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,8 +428,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Step 6: Configure styles for the UI components" />
-    <MESSAGE value="update workspace.xml configures" />
     <MESSAGE value="Implement Step 7: Add the attack type selection components" />
     <MESSAGE value="Implement Step 8: Add the file type selection frame" />
     <MESSAGE value="Start Implementing Step 9: Add the brute force configuration frame" />
@@ -438,6 +451,8 @@
     <MESSAGE value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
     <MESSAGE value="Implement Step 5: Function to Try a Password on Different File Types" />
     <MESSAGE value="Implement Step 6: Define a function to try passwords on MS Office files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 6: Define a function to try passwords on MS Office files" />
+    <MESSAGE value="Implement Step 7: Define a function to try passwords on ZIP files" />
+    <MESSAGE value="Implement Step 8: Function to try passwords on PDF files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 8: Function to try passwords on PDF files" />
   </component>
 </project>
