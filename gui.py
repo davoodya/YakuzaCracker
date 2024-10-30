@@ -172,7 +172,6 @@ dictionaryFileEntry.grid(row=3, column=1, pady=5, padx=5, sticky="w")
 # Step 10.6: Create Browse Button
 ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=3, column=2, pady=5, padx=5, sticky="w")
 
-dictionaryFrame.grid(row=3, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 """ Step 11: Add the Reverse Bruteforce Attack Configuration Frame """
 # Step 11.0: Create Reverse Bruteforce Attack Frame
@@ -210,7 +209,9 @@ ttk.Button(reverseBruteForceFrame, text="Browse", style="TButton").grid(row=4, c
 
 
 """ Step 12: Add the Run, Stop and Clear Buttons """
-
+ttk.Button(mainFrame, text="Run", style="TButton", width=15).grid(row=5, column=0, pady=10, padx=5, sticky="ew")
+ttk.Button(mainFrame, text="Stop", style="TButton", width=15).grid(row=5, column=1, pady=10, padx=5, sticky="ew")
+ttk.Button(mainFrame, text="Clear", style="TButton", width=15).grid(row=5, column=2, pady=10, padx=5, sticky="ew")
 
 
 

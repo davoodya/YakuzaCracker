@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed">
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730305900060</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed">
+      <option name="closed" value="true" />
+      <created>1730306213788</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1730306213788</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +305,7 @@
     <MESSAGE value="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame" />
     <MESSAGE value="Implementing Step 10: Add the Dictionary Attack Configuration Frame Completed" />
     <MESSAGE value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
+    <MESSAGE value="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed" />
   </component>
 </project>
