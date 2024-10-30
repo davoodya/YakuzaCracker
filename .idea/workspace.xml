@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implementing Step 15: Main Execution with Automatic Window Resizing">
-      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -325,7 +323,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730310479650</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Implementing Step 15: Main Execution with Automatic Window Resizing">
+      <option name="closed" value="true" />
+      <created>1730310513227</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1730310513227</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)">
+      <option name="closed" value="true" />
+      <created>1730310865617</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1730310865617</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start Developing GUI Layout" />
     <MESSAGE value="Implement Step 1: Import all Requires Libraries" />
     <MESSAGE value="Implement Step 2: Initialize the Main Window" />
     <MESSAGE value="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)" />
@@ -365,6 +378,7 @@
     <MESSAGE value="Start Implementing Step 14: Set the column configurations" />
     <MESSAGE value="Implementing Step 14: Set the column configurations Completed" />
     <MESSAGE value="Implementing Step 15: Main Execution with Automatic Window Resizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Step 15: Main Execution with Automatic Window Resizing" />
+    <MESSAGE value="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
   </component>
 </project>

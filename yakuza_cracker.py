@@ -9,3 +9,7 @@ import sys
 
 from colorama import init
 
+
+""" Step 1: Initialize colorama for colored console output """
+init()
+
