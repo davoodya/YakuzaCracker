@@ -21,6 +21,7 @@ from pyzipper import AESZipFile
 from PyPDF2 import PdfReader
 from PIL import Image, ImageTk
 from time import time
+from tabulate import tabulate
 
 """ Part 1: Building GUI Functions and Other Objects"""
 
@@ -450,6 +451,17 @@ def update_progress_bar(current, total, start_time):
     root.update_idletasks()
 
 
+# Step 12.4: Define a function to summarize the results and update the log
+def summary_results():
+    global results
+
+    if results:
+        # Create table from results with 3 columns: Attempt, Password, Status
+        summaryTable = tabulate(results, headers=["Attempt", "Password", "Status"], tablefmt="grid")
+
+        update_result_log(f"\nSummary of findings:\n{summaryTable}")
+        update_progress("Attack stopped and Results summarized into table.")
+        logging.info("[+] Attack stopped and Results summarized into table.")
 
 
 
