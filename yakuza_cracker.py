@@ -15,7 +15,7 @@ from os import path
 from msoffcrypto import OfficeFile
 from io import BytesIO
 from pyzipper import AESZipFile
-
+from PyPDF2 import PdfReader
 
 # Step 1: Initialize colorama for colored console output
 init()
@@ -87,17 +87,25 @@ def try_office_password(file_path, password):
             file.decrypt(decrypted)
             return True
 
-# Step 7: Define a function to try passwords on ZIP files
+# Step 7: Function to try passwords on ZIP files
 def try_zip_password(file_path, password):
     # Open the ZIP file and attempt to extract it using pyzipper
     with AESZipFile(file_path) as zf:
         zf.extractall(pwd=password.encode('utf-8'))
         return True
 
-
+# Step 8: Function to try passwords on PDF files
 def try_pdf_password(file_path, password):
-    pass
+    # Open the PDF file and attempt to decrypt it using PyPDF2
+    reader = PdfReader(file_path)
 
+    # if the PDF file is encrypted, then decrypt it using the provided password
+    if reader.is_encrypted:
+        reader.decrypt(password)
+        reader.pages[0]
+        return True
+
+    return False
 
 
 
