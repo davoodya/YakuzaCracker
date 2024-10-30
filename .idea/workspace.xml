@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 8: Add the file type selection frame">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Update gitignore to avoid pushing IDE Files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +214,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730302166997</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Start Implementing Step 9: Add the brute force configuration frame">
+      <option name="closed" value="true" />
+      <created>1730302235637</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1730302235637</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update gitignore to avoid pushing IDE Files">
+      <option name="closed" value="true" />
+      <created>1730302281731</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1730302281731</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +260,8 @@
     <MESSAGE value="update workspace.xml configures" />
     <MESSAGE value="Implement Step 7: Add the attack type selection components" />
     <MESSAGE value="Implement Step 8: Add the file type selection frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 8: Add the file type selection frame" />
+    <MESSAGE value="Start Implementing Step 9: Add the brute force configuration frame" />
+    <MESSAGE value="Update gitignore to avoid pushing IDE Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore to avoid pushing IDE Files" />
   </component>
 </project>

@@ -118,7 +118,40 @@ fileTypeFrame.grid(row=1, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 
 """ Step 9: Add the brute force configuration frame """
+
+# Step 9.1: Create brute force frame
 bruteForceFrame = ttk.Frame(mainFrame, style="TFrame")
+
+# Step 9.2: Create Label for brute force frame
+ttk.Label(bruteForceFrame, text="FilePath:", font=("Courier New", 12)).grid(row=2, column=0, pady=5, padx=5, sticky="w")
+
+# Step 9.3: Create File Path Entry
+filePathEntry = ttk.Entry(bruteForceFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+filePathEntry.grid(row=2, column=1, pady=5, padx=5, sticky="w")
+
+# Step 9.4: Create a Browse Button
+ttk.Button(bruteForceFrame, text="Browse", style="TButton").grid(row=2, column=2, pady=5, padx=5, sticky="w")
+
+# Step 9.5: Create MAX Length Label
+ttk.Label(bruteForceFrame, text="Max Length:", font=("Courier New", 12)).grid(row=3, column=0, pady=5, padx=5, sticky="w")
+
+# Step 9.6: Create MAX Length Entry
+maxLengthEntry = ttk.Entry(bruteForceFrame, width=10, font=("Consolas", 12), background="#151525", foreground="red")
+maxLengthEntry.grid(row=3, column=1, pady=5, padx=5, sticky="w")
+
+# Step 9.7: Create Charset Label
+ttk.Label(bruteForceFrame, text="Charset:", font=("Courier New", 12)).grid(row=4, column=0, pady=5, padx=5, sticky="w")
+
+# Step 9.8: Create Charset Entry
+charsetEntry = ttk.Entry(bruteForceFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+charsetEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
+
+
+""" Step 10: Add the Dictionary Attack Configuration Frame """
+
+# Step 10.1: Create Filepath Label
+
+
 
 
 
