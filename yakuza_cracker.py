@@ -464,6 +464,26 @@ def summary_results():
         logging.info("[+] Attack stopped and Results summarized into table.")
 
 
+# Step 12.5: Define a function to clear the attack results and reset the UI
+def clear_attack():
+    global stopFlag, results
+
+    # Reinitialize Global Variables
+    stopFlag = False
+    results = []
+
+    # Reinitialize UI Variables
+    progressVar.set("")
+    outputLogs.delete(1.0, END)
+    resultLogs.delete(1.0, END)
+
+    # Reinitialize the Progress Bar and ETA
+    progressBar['value'] = 0
+    progressLabel.config(text="Progress: 0%")
+    etaLabel.config(text="Estimated Time Remaining: N/A")
+
+    # Submit Log for Reinitialization
+    logging.info("[+] Attack Cleared, All Objects Reinitialized.")
 
 
 
