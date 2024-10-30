@@ -107,6 +107,7 @@ def try_pdf_password(file_path, password):
 
     return False
 
+
 # Step 9: Function for Perform Multithreading Password Cracking Attempts
 def attempt_passwords(file_path, file_type, passwords, results, batch_index):
     for password in passwords:
@@ -118,6 +119,24 @@ def attempt_passwords(file_path, file_type, passwords, results, batch_index):
     return None
 
 
+# Step 10: Define a function to determine the file type based on the file extension
+def get_file_type(file_path):
+    extension = path.splitext(file_path)[1].lower()
+
+    if extension in ['.xls', '.xlsx']:
+        return 'xls'
+
+    elif extension in ['.doc', '.docx']:
+        return 'doc'
+
+    elif extension == '.zip':
+        return 'zip'
+
+    elif extension == '.pdf':
+        return 'pdf'
+
+    else:
+        return None
 
 
 
