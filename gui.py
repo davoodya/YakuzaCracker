@@ -254,6 +254,16 @@ etaLabel = Label(outputFrame, text="Estimated Time Remaining: N/A", bg="#05050F"
 etaLabel.pack()
 
 
+""" Step 14: Set the column configurations """
+
+
+
+
+
+
+
+
+
 # For testing
 if __name__ == "__main__":
     root.update_idletasks()
