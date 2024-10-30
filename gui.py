@@ -9,7 +9,7 @@ Last Update: 29/10/2024 --- 8 aban 1403"""
 import sys
 
 from os import path
-from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk
+from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label
 from PIL import Image, ImageTk
 
 """ Step 2: Initialize the Main Window """
@@ -52,7 +52,7 @@ root.iconphoto(False, logo) # noqa
 """ Step 5: Create the Main Frame """
 mainFrame = ttk.Frame(root, padding="10")
 mainFrame.grid(row=0, column=0, sticky="nsew")
-mainFrame.mainloop()
+
 
 """ Step 6: Configure styles for the UI components """
 # Create style Instance
@@ -72,6 +72,25 @@ style.configure("TButton", background="black", foreground="red", bordercolor="#0
 style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", background="#00FF00", bordercolor="05050F")
 
 
+""" Step 7: Add the attack type selection components """
+
+# Create String Variable to store brute_force
+attackTypeVar = StringVar(value="brute_force")
+
+# Create Label in main_frame with text => Select Attack Type:
+attackTypeLabel = Label(mainFrame, text="Select Attack Type:", font=("Courier New", 12))
+
+# Set Position of Label in the Main Frame
+attackTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
+
+# Create new Combobox to show attack_type_var(brute_force) as first item
+attackTypeMenu = ttk.Combobox(mainFrame, textvariable=attackTypeVar, state="readonly", font=("Consolas", 12))
+
+# Create Values of the Combobox
+attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
+
+# Set position of Combobox in the Main Frame
+attackTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 
 
 
@@ -88,3 +107,5 @@ style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", backgroun
 
 
 
+# For testing
+mainFrame.mainloop()

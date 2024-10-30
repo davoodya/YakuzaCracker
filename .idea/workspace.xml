@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="add logo.png file use as GUI Icon">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="update workspace.xml configures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
@@ -59,7 +59,7 @@
     "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "editor.preferences.tabs"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -182,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730223711870</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implement Step 6: Configure styles for the UI components">
+      <option name="closed" value="true" />
+      <created>1730296990447</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730296990447</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update workspace.xml configures">
+      <option name="closed" value="true" />
+      <created>1730297012059</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730297012059</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +224,8 @@
     <MESSAGE value="Implement Step 4: Set the Icon for the Window" />
     <MESSAGE value="Implement Step 5: Create the Main Frame" />
     <MESSAGE value="add logo.png file use as GUI Icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logo.png file use as GUI Icon" />
+    <MESSAGE value="Implement Step 6: Configure styles for the UI components" />
+    <MESSAGE value="update workspace.xml configures" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml configures" />
   </component>
 </project>
