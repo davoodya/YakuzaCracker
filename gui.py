@@ -149,6 +149,9 @@ charsetEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
 
 """ Step 10: Add the Dictionary Attack Configuration Frame """
 
+# Step 10.0: Create Dictionary Attack Frame
+dictionaryFrame = ttk.Frame(mainFrame, style="TFrame")
+
 # Step 10.1: Create Filepath Label
 
 
