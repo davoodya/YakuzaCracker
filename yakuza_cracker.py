@@ -139,12 +139,33 @@ def get_file_type(file_path):
         return None
 
 
+# Step 11: Define a function to read file lines with fallback encoding and error handling
+def read_file_lines(file_path):
+    encodings = ['utf-8', 'latin-1', 'ascii']
+
+    # Open file_path with all encodings and then return files line by line, if encoding its wrong try next encoding
+    for encoding in encodings:
+        try:
+
+            with open(file_path, 'r', encoding=encoding, errors='ignore') as file:
+                return [line.strip() for line in file.readlines()]
+
+
+        except UnicodeDecodeError:
+            continue
+
+    raise ValueError(f"Failed to decode file {file_path} with tried encodings.")
+
+
+
+
 
 
 
 
 def test():
-    print(path.splitext(__file__)[1].lower())
+    # print(path.splitext(__file__)[1].lower())
+    print(read_file_lines(__file__))
 
 if __name__ == "__main__":
     test()
