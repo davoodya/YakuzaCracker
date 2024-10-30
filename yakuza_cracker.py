@@ -14,7 +14,7 @@ from colorama import init
 from os import path
 from msoffcrypto import OfficeFile
 from io import BytesIO
-
+from pyzipper import AESZipFile
 
 
 # Step 1: Initialize colorama for colored console output
@@ -78,6 +78,7 @@ def try_password(file_path, file_type, password):
 
 # Step 6: Define a function to try passwords on MS Office files
 def try_office_password(file_path, password):
+    # Read Office file
     with open(file_path, 'rb') as f:
         file = OfficeFile(f)
         file.load_key(password=password)
@@ -86,9 +87,12 @@ def try_office_password(file_path, password):
             file.decrypt(decrypted)
             return True
 
-
+# Step 7: Define a function to try passwords on ZIP files
 def try_zip_password(file_path, password):
-    pass
+    # Open the ZIP file and attempt to extract it using pyzipper
+    with AESZipFile(file_path) as zf:
+        zf.extractall(pwd=password.encode('utf-8'))
+        return True
 
 
 def try_pdf_password(file_path, password):

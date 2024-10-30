@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 6: Define a function to try passwords on MS Office files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
@@ -382,7 +382,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730315875574</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Implement Step 5: Function to Try a Password on Different File Types">
+      <option name="closed" value="true" />
+      <created>1730316658386</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1730316658386</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Implement Step 6: Define a function to try passwords on MS Office files">
+      <option name="closed" value="true" />
+      <created>1730316864739</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1730316864739</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,8 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Step 5: Create the Main Frame" />
-    <MESSAGE value="add logo.png file use as GUI Icon" />
     <MESSAGE value="Implement Step 6: Configure styles for the UI components" />
     <MESSAGE value="update workspace.xml configures" />
     <MESSAGE value="Implement Step 7: Add the attack type selection components" />
@@ -422,6 +436,8 @@
     <MESSAGE value="Implement Step 3: Define global variables" />
     <MESSAGE value="Start Developing Section 2: Developing Utility Functions" />
     <MESSAGE value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
+    <MESSAGE value="Implement Step 5: Function to Try a Password on Different File Types" />
+    <MESSAGE value="Implement Step 6: Define a function to try passwords on MS Office files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 6: Define a function to try passwords on MS Office files" />
   </component>
 </project>
