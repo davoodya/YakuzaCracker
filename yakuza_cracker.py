@@ -352,7 +352,7 @@ def try_pdf_password(file_path, password):
 
 
 # Step 9: Function for Perform Multithreading Password Cracking Attempts
-def attempt_passwords(file_path, file_type, passwords, results, batch_index):
+def attempt_passwords(file_path, file_type, passwords, results, batch_index): # noqa
     for password in passwords:
         if try_password(file_path, file_type, password):
             results[batch_index] = (password, "Success")
