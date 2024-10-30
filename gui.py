@@ -41,7 +41,7 @@ def resource_path(relative_path):
 logo = Image.open(resource_path("img/logo.png"))
 
 # resize logo.png
-logo = logo.resize((64, 64), Image.LANCZOS)
+logo = logo.resize((64, 64), Image.LANCZOS) # noqa
 
 # Prepare Logo image to use in the tkinter UI
 logo = ImageTk.PhotoImage(logo)
@@ -53,3 +53,38 @@ root.iconphoto(False, logo) # noqa
 mainFrame = ttk.Frame(root, padding="10")
 mainFrame.grid(row=0, column=0, sticky="nsew")
 mainFrame.mainloop()
+
+""" Step 6: Configure styles for the UI components """
+# Create style Instance
+style = ttk.Style()
+
+# Configure new style for Labels in named TLabel
+style.configure("TLabel", background="#05050F", foreground="#FFD700")
+
+# Configure new style for Frames in named TFrame
+style.configure("TFrame", background="#05050F")
+
+# Configure new style for Buttons in named TButton
+style.configure("TButton", background="black", foreground="red", bordercolor="#009933",
+                focusthickness=3, focuscolor="None")
+
+# Configure new style for Horizontal Progressbar in named Green.Horizontal.TProgressbar
+style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", background="#00FF00", bordercolor="05050F")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
