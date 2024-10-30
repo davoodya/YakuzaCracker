@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 2: Setup logging configuration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 3: Define global variables" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730311073585</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Implement Step 3: Define global variables">
+      <option name="closed" value="true" />
+      <created>1730315426676</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1730315426676</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -373,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)" />
     <MESSAGE value="Add some doc strings" />
     <MESSAGE value="Implement Step 4: Set the Icon for the Window" />
     <MESSAGE value="Implement Step 5: Create the Main Frame" />
@@ -398,6 +402,7 @@
     <MESSAGE value="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
     <MESSAGE value="Implement Step 1: Initialize colorama for colored console output" />
     <MESSAGE value="Implement Step 2: Setup logging configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 2: Setup logging configuration" />
+    <MESSAGE value="Implement Step 3: Define global variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 3: Define global variables" />
   </component>
 </project>

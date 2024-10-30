@@ -4,6 +4,8 @@
 Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
 
+""" Section 1: Import all Requires Libraries and Basic Configurations """
+
 """ Step 0: Import all Requires Libraries """
 import sys
 
@@ -24,6 +26,25 @@ stopFlag = False
 
 # result's list use to store the cracked(founded) passwords
 results = []
+
+
+
+""" Section 2: Developing Utility Functions """
+
+""" Step 4: Function to Get the Path to Bundled Resources in PyInstaller """
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
