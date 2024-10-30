@@ -20,7 +20,7 @@ from io import BytesIO
 from pyzipper import AESZipFile
 from PyPDF2 import PdfReader
 from PIL import Image, ImageTk
-
+from time import time
 
 """ Part 1: Building GUI Functions and Other Objects"""
 
@@ -419,6 +419,35 @@ def update_result_log(message, success=False):
         resultLogs.insert(END, message + '\n')
 
     resultLogs.see(END)
+
+
+# Step 12.3: Define a function to update the progress bar and ETA Label
+def update_progress_bar(current, total, start_time):
+    # Calculate the Percentage of Attack Progress
+    progressPercentage = min(100, (current / total) * 100)
+    progressBar['value'] = progressPercentage
+
+    # Config Progress Bar Label
+    progressLabel.config(text=f"Progress: {progressPercentage:.2f}%")
+
+    # Calculate the time elapsed since the start of the attack
+    elapsedTime = time() - start_time
+
+    if 0 < current < total:
+        # Calculate the estimated total time and remaining time
+        estimatedTotalTime = elapsedTime * total / current
+        estimatedRemainingTime = estimatedTotalTime - elapsedTime
+
+        # Set the ETA label
+        etaLabel.config(text=f"Estimated Time Remaining: "
+                             f"{int(estimatedRemainingTime // 60)} min {int(estimatedRemainingTime % 60)} sec")
+
+    # if time attack time finished, then set the ETA label to 0 min 0 sec
+    elif current >= total:
+        etaLabel.config(text="Estimated Time Remaining: 0 min 0 sec")
+
+    # Update the progress bar and ETA label
+    root.update_idletasks()
 
 
 
