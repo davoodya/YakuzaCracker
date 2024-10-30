@@ -4,7 +4,8 @@
 Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
 
-""" Step 1: Import all Requires Libraries """
+
+#Step 1: Import all Requires Libraries
 
 import sys
 import logging
@@ -23,13 +24,7 @@ from PIL import Image, ImageTk
 
 """ Part 1: Building GUI Functions and Other Objects"""
 
-
-""" Step 2: Initialize the Main Window """
-root = Tk()
-root.title("Yakuza Cracker")
-# root.geometry("800x700")
-
-# Step 4: Function to Get the Path to Bundled Resources in PyInstaller
+# Step 4 from Part2: Function to Get the Path to Bundled Resources in PyInstaller
 def resource_path(relative_path):
     try:
         # if gui.py bundled with PyInstaller,
@@ -47,8 +42,13 @@ def resource_path(relative_path):
 
     return path.join(basePath, relative_path)
 
+# Step 2: Initialize the Main Window
+root = Tk()
+root.title("Yakuza Cracker")
+# root.geometry("800x700")
 
-""" Step 4: Set the Icon for the Window """
+
+# Step 4: Set the Icon for the Window
 # open logo.png using resource_path()
 logo = Image.open(resource_path("img/logo.png"))
 
@@ -61,12 +61,12 @@ logo = ImageTk.PhotoImage(logo)
 # Set Logo in the main gui
 root.iconphoto(False, logo) # noqa
 
-""" Step 5: Create the Main Frame """
+# Step 5: Create the Main Frame
 mainFrame = ttk.Frame(root, padding="10")
 mainFrame.grid(row=0, column=0, sticky="nsew")
 
 
-""" Step 6: Configure styles for the UI components """
+# Step 6: Configure styles for the UI components
 # Create style Instance
 style = ttk.Style()
 
@@ -84,7 +84,7 @@ style.configure("TButton", background="black", foreground="red", bordercolor="#0
 style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", background="#00FF00", bordercolor="05050F")
 
 
-""" Step 7: Add the attack type selection components """
+# Step 7: Add the attack type selection components
 
 # Create String Variable to store brute_force
 attackTypeVar = StringVar(value="brute_force")
@@ -105,7 +105,7 @@ attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
 attackTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 
 
-""" Step 8: Add the file type selection frame """
+# Step 8: Add the file type selection frame
 # Create ttk.Frame with TFrame style
 fileTypeFrame = ttk.Frame(mainFrame, style="TFrame")
 
@@ -129,7 +129,7 @@ fileTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 fileTypeFrame.grid(row=1, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 
-""" Step 9: Add the brute force configuration frame """
+# Step 9: Add the brute force configuration frame
 
 # Step 9.1: Create brute force frame
 bruteForceFrame = ttk.Frame(mainFrame, style="TFrame")
@@ -159,7 +159,7 @@ charsetEntry = ttk.Entry(bruteForceFrame, width=40, font=("Consolas", 12), backg
 charsetEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
 
 
-""" Step 10: Add the Dictionary Attack Configuration Frame """
+# Step 10: Add the Dictionary Attack Configuration Frame
 
 # Step 10.0: Create Dictionary Attack Frame
 dictionaryFrame = ttk.Frame(mainFrame, style="TFrame")
@@ -185,7 +185,7 @@ dictionaryFileEntry.grid(row=3, column=1, pady=5, padx=5, sticky="w")
 ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=3, column=2, pady=5, padx=5, sticky="w")
 
 
-""" Step 11: Add the Reverse Bruteforce Attack Configuration Frame """
+# Step 11: Add the Reverse Bruteforce Attack Configuration Frame
 # Step 11.0: Create Reverse Bruteforce Attack Frame
 reverseBruteForceFrame = ttk.Frame(mainFrame, style="TFrame")
 
@@ -220,13 +220,13 @@ commonPasswordFileEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
 ttk.Button(reverseBruteForceFrame, text="Browse", style="TButton").grid(row=4, column=2, pady=5, padx=5, sticky="w")
 
 
-""" Step 12: Add the Run, Stop and Clear Buttons """
+# Step 12: Add the Run, Stop and Clear Buttons
 ttk.Button(mainFrame, text="Run", style="TButton", width=15).grid(row=5, column=0, pady=10, padx=5, sticky="ew")
 ttk.Button(mainFrame, text="Stop", style="TButton", width=15).grid(row=5, column=1, pady=10, padx=5, sticky="ew")
 ttk.Button(mainFrame, text="Clear", style="TButton", width=15).grid(row=5, column=2, pady=10, padx=5, sticky="ew")
 
 
-""" Step 13: Create the Progress Display and Output Display """
+# Step 13: Create the Progress Display and Output Display
 
 # Step 13.1: StringVars to store Progress and table results
 progressVar = StringVar()
@@ -267,7 +267,7 @@ etaLabel = Label(outputFrame, text="Estimated Time Remaining: N/A", bg="#05050F"
 etaLabel.pack()
 
 
-""" Step 14: Set the column configurations """
+# Step 14: Set the column configurations
 root.grid_columnconfigure(0, weight=1)
 mainFrame.grid_columnconfigure(0, weight=1)
 mainFrame.grid_columnconfigure(1, weight=1)
@@ -293,7 +293,7 @@ results = []    # result's list use to store the cracked(founded) passwords
 
 """ Section 2: Developing Utility Functions """
 
-""" Step 5: Function to Try a Password on Different File Types """
+# Step 5: Function to Try a Password on Different File Types
 def try_password(file_path, file_type, password):
     logging.info(f"[+] Trying password: {password}")
     
