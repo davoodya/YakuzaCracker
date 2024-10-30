@@ -7,15 +7,14 @@ Last Update: 29/10/2024 --- 8 aban 1403"""
 """ Step 1: Import all Requires Libraries """
 
 import sys
-
 from os import path
-from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label
+from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X
 from PIL import Image, ImageTk
 
 """ Step 2: Initialize the Main Window """
 root = Tk()
 root.title("Yakuza Cracker")
-root.geometry("800x700")
+# root.geometry("800x700")
 
 """ Step 3: Function to Get the Current Path to Bundled Resources (e.g., Logo, Image, ...) for PyInstaller """
 def resource_path(relative_path):
@@ -214,6 +213,45 @@ ttk.Button(mainFrame, text="Stop", style="TButton", width=15).grid(row=5, column
 ttk.Button(mainFrame, text="Clear", style="TButton", width=15).grid(row=5, column=2, pady=10, padx=5, sticky="ew")
 
 
+""" Step 13: Create the Progress Display and Output Display """
+
+# Step 13.1: StringVars to store Progress and table results
+progressVar = StringVar()
+tableVar = StringVar()
+
+# Step 13.2: Create Label for show progressVar in the mainFrame
+ttk.Label(mainFrame, textvariable=progressVar, wraplength=700,
+          font=("Courier New", 12)).grid(row=6, column=0, columnspan=3,  pady=10, padx=10, sticky="ew")
+
+# Step 13.3: Create Output Frame and set it on the Row 7 with 3 Column Span
+outputFrame = ttk.Frame(mainFrame, style="TFrame")
+outputFrame.grid(row=7, column=0, columnspan=3, pady=10, padx=10, sticky="ew")
+
+# Step 13.4: Create Progress Logs Label
+ttk.Label(outputFrame, text="Progress Logs:", font=("Courier New", 12)).pack(anchor="w")
+
+# Step 13.5: Output Logs Scrolled Text
+outputLogs = scrolledtext.ScrolledText(outputFrame, height=10, wrap=WORD, bg="#05050F", fg="#FFD700", font=("Consolas", 10))
+outputLogs.pack(fill=BOTH, expand=True)
+
+# Step 13.6: Create Result Log Label
+ttk.Label(outputFrame, text="Results Log:", font=("Courier New", 12)).pack(anchor="w")
+
+# Step 13.7: Result Logs Scrolled Text
+resultLogs = scrolledtext.ScrolledText(outputFrame, height=10, wrap=WORD, bg="#05050F", fg="#FFD700", font=("Consolas", 10))
+resultLogs.pack(fill=BOTH, expand=True)
+
+# Step 13.8: Create Progress Bar to Show Taken/Estimated Percentage of the Cracking Attack in the outputFrame
+progressBar = ttk.Progressbar(outputFrame, orient=HORIZONTAL, length=700, mode="determinate", style="Green.Horizontal.TProgressbar")
+progressBar.pack(fill=X, pady=5)
+
+# Step 13.9: Create Percentage Text Label
+progressLabel = Label(outputFrame, text="Progress: 0%", bg="#05050F", fg="#FFD700", font=("Courier New", 12))
+progressLabel.pack()
+
+# Step 13.10: Create Estimated Time Remaining Label
+etaLabel = Label(outputFrame, text="Estimated Time Remaining: N/A", bg="#05050F", fg="#FFD700", font=("Consolas", 12))
+etaLabel.pack()
 
 
 
@@ -224,5 +262,12 @@ ttk.Button(mainFrame, text="Clear", style="TButton", width=15).grid(row=5, colum
 
 
 
-# For testing
-mainFrame.mainloop()
+
+
+
+
+
+
+
+
+
