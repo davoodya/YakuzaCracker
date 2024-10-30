@@ -152,7 +152,35 @@ charsetEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
 # Step 10.0: Create Dictionary Attack Frame
 dictionaryFrame = ttk.Frame(mainFrame, style="TFrame")
 
-# Step 10.1: Create Filepath Label
+# Step 10.1: Create File Path Label
+ttk.Label(dictionaryFrame, text="File Path:", font=("Courier New", 12)).grid(row=2, column=0, pady=5, padx=5, sticky="w")
+
+# Step 10.2: Create File Path Entry
+filePathEntryDict = ttk.Entry(dictionaryFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+filePathEntryDict.grid(row=2, column=1, pady=5, padx=5, sticky="w")
+
+# Step 10.3: Create Browse Button
+ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=2, column=2, pady=5, padx=5, sticky="w")
+
+# Step 10.4: Create Dictionary File Label
+ttk.Label(dictionaryFrame, text="Dictionary File:", font=("Courier New", 12)).grid(row=3, column=0, pady=5, padx=5, sticky="w")
+
+# Step 10.5: Create Dictionary File Entry
+dictionaryFileEntry = ttk.Entry(dictionaryFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+dictionaryFileEntry.grid(row=3, column=1, pady=5, padx=5, sticky="w")
+
+# Step 10.6: Create Browse Button
+ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=3, column=2, pady=5, padx=5, sticky="w")
+
+dictionaryFrame.grid(row=3, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
+
+
+
+
+
+
+
+
 
 
 

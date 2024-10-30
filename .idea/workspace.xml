@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Update gitignore to avoid pushing IDE Files">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
@@ -230,7 +230,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730302281731</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implementing Step 9: Add the brute force configuration frame Completed">
+      <option name="closed" value="true" />
+      <created>1730305039978</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730305039978</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame">
+      <option name="closed" value="true" />
+      <created>1730305101882</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730305101882</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +278,8 @@
     <MESSAGE value="Implement Step 8: Add the file type selection frame" />
     <MESSAGE value="Start Implementing Step 9: Add the brute force configuration frame" />
     <MESSAGE value="Update gitignore to avoid pushing IDE Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore to avoid pushing IDE Files" />
+    <MESSAGE value="Implementing Step 9: Add the brute force configuration frame Completed" />
+    <MESSAGE value="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame" />
   </component>
 </project>
