@@ -174,7 +174,7 @@ ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=3, column=2
 
 dictionaryFrame.grid(row=3, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
-
+""" Step 11: Add the Reverse Bruteforce Attack Configuration Frame """
 
 
 
