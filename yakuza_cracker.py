@@ -12,8 +12,12 @@ import logging
 
 from colorama import init
 from os import path
+from msoffcrypto import OfficeFile
+from io import BytesIO
 
-# Step 1: Initialize colorama for colored console output 
+
+
+# Step 1: Initialize colorama for colored console output
 init()
 
 # Step 2: Setup logging configuration
@@ -72,9 +76,15 @@ def try_password(file_path, file_type, password):
         logging.error(f"[-] Error Trying password: {password} | Error: {e}")
         return False
 
-
+# Step 6: Define a function to try passwords on MS Office files
 def try_office_password(file_path, password):
-    pass
+    with open(file_path, 'rb') as f:
+        file = OfficeFile(f)
+        file.load_key(password=password)
+
+        with BytesIO() as decrypted:
+            file.decrypt(decrypted)
+            return True
 
 
 def try_zip_password(file_path, password):
