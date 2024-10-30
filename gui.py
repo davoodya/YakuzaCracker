@@ -34,6 +34,7 @@ def resource_path(relative_path):
 
     return path.join(basePath, relative_path)
 
+
 """ Step 4: Set the Icon for the Window """
 
 # open logo.png using resource_path()
@@ -270,17 +271,6 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-# Step 15: Main Execution with Automatic Window Resizing
-if __name__ == "__main__":
-    root.update_idletasks()
-    root.minsize(root.winfo_width(), root.winfo_height())
-    root.mainloop()
 
 
 
