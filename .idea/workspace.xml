@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="fix last">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 12.4: Define summary_results() function to summarize the results and update the log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
@@ -78,70 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730218992285</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update requirements.txt to fix a new version of modules">
-      <option name="closed" value="true" />
-      <created>1730220267510</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220267510</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add gui.py and gui.txt to implement Layout of Main UI">
-      <option name="closed" value="true" />
-      <created>1730220412121</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220412121</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Start Developing GUI Layout">
-      <option name="closed" value="true" />
-      <created>1730220447231</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220447231</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Implement Step 1: Import all Requires Libraries">
-      <option name="closed" value="true" />
-      <created>1730220562647</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220562647</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Implement Step 2: Initialize the Main Window">
-      <option name="closed" value="true" />
-      <created>1730220661098</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220661099</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)">
-      <option name="closed" value="true" />
-      <created>1730221376534</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1730221376534</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Implement Step 3: resource_path() function, this Function used to Get the Current Path to Bundled Resources for PyInstaller(e.g., Logo, Image, ...)">
-      <option name="closed" value="true" />
-      <created>1730221581433</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1730221581433</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add some doc strings">
-      <option name="closed" value="true" />
-      <created>1730222133137</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1730222133137</updated>
     </task>
     <task id="LOCAL-00010" summary="Implement Step 4: Set the Icon for the Window">
       <option name="closed" value="true" />
@@ -471,7 +407,71 @@
       <option name="project" value="LOCAL" />
       <updated>1730320474182</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Start developing Section 3, Implement Step 12: Define a function to update the progress message">
+      <option name="closed" value="true" />
+      <created>1730320873648</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1730320873648</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Add GUI Codes to the file begging">
+      <option name="closed" value="true" />
+      <created>1730321457744</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1730321457744</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix a bug">
+      <option name="closed" value="true" />
+      <created>1730321469688</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1730321469688</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1730321482156</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1730321482156</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Implement Step 12 &amp; 12.1: Define a function to update the progress message &amp; Define a function to update the main log">
+      <option name="closed" value="true" />
+      <created>1730321783808</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1730321783808</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Implement Step 12.2: Define update_result_log() function to update the result log">
+      <option name="closed" value="true" />
+      <created>1730322206467</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1730322206467</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Implement Step 12.3: Define update_progress_bar() function to update the progress bar and ETA Label">
+      <option name="closed" value="true" />
+      <created>1730322757733</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1730322757733</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Implement Step 12.4: Define summary_results() function to summarize the results and update the log">
+      <option name="closed" value="true" />
+      <created>1730323103552</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1730323103552</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,13 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed" />
-    <MESSAGE value="Implementing Step 12: Add the Run, Stop and Clear Buttons" />
-    <MESSAGE value="Implementing Step 13: Create the Progress Display and Output Display" />
-    <MESSAGE value="add the main execution with Fixed UI Sizing using root.update_idletasks() and root.minsize()" />
-    <MESSAGE value="Start Implementing Step 14: Set the column configurations" />
-    <MESSAGE value="Implementing Step 14: Set the column configurations Completed" />
-    <MESSAGE value="Implementing Step 15: Main Execution with Automatic Window Resizing" />
     <MESSAGE value="Start Developing the main Application; we used GUI templated developed in the Section 0(gui.py)" />
     <MESSAGE value="Implement Step 1: Initialize colorama for colored console output" />
     <MESSAGE value="Implement Step 2: Setup logging configuration" />
@@ -503,7 +496,6 @@
     <MESSAGE value="Implement Step 6: Define a function to try passwords on MS Office files" />
     <MESSAGE value="Implement Step 7: Define a function to try passwords on ZIP files" />
     <MESSAGE value="Implement Step 8: Function to try passwords on PDF files" />
-    <MESSAGE value="update workspace.xml" />
     <MESSAGE value="Implement Step 9: Function for Perform Multithreading Password Cracking Attempts" />
     <MESSAGE value="Implement Step 10: Define a Function to determine the file type based on the file extension" />
     <MESSAGE value="add test execution block to test my codes easily" />
@@ -511,6 +503,14 @@
     <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Implement Step 11: Define a function to read file lines with fallback encoding and error handling" />
     <MESSAGE value="fix last" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix last" />
+    <MESSAGE value="Start developing Section 3, Implement Step 12: Define a function to update the progress message" />
+    <MESSAGE value="Add GUI Codes to the file begging" />
+    <MESSAGE value="fix a bug" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="Implement Step 12 &amp; 12.1: Define a function to update the progress message &amp; Define a function to update the main log" />
+    <MESSAGE value="Implement Step 12.2: Define update_result_log() function to update the result log" />
+    <MESSAGE value="Implement Step 12.3: Define update_progress_bar() function to update the progress bar and ETA Label" />
+    <MESSAGE value="Implement Step 12.4: Define summary_results() function to summarize the results and update the log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 12.4: Define summary_results() function to summarize the results and update the log" />
   </component>
 </project>
