@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame">
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730305101882</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Implementing Step 10: Add the Dictionary Attack Configuration Frame Completed">
+      <option name="closed" value="true" />
+      <created>1730305865055</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730305865055</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame">
+      <option name="closed" value="true" />
+      <created>1730305900060</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1730305900060</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +295,8 @@
     <MESSAGE value="Update gitignore to avoid pushing IDE Files" />
     <MESSAGE value="Implementing Step 9: Add the brute force configuration frame Completed" />
     <MESSAGE value="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame" />
+    <MESSAGE value="Implementing Step 10: Add the Dictionary Attack Configuration Frame Completed" />
+    <MESSAGE value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
   </component>
 </project>

@@ -175,10 +175,41 @@ ttk.Button(dictionaryFrame, text="Browse", style="TButton").grid(row=3, column=2
 dictionaryFrame.grid(row=3, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 """ Step 11: Add the Reverse Bruteforce Attack Configuration Frame """
+# Step 11.0: Create Reverse Bruteforce Attack Frame
+reverseBruteForceFrame = ttk.Frame(mainFrame, style="TFrame")
+
+# Step 11.1: Create Target URL Label
+ttk.Label(reverseBruteForceFrame, text="Target URL:",
+          font=("Courier New", 12)).grid(row=2, column=0, pady=5, padx=5, sticky="w")
+
+# Step 11.2: Create Target URL Entry
+urlEntry = ttk.Entry(reverseBruteForceFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+urlEntry.grid(row=2, column=1, pady=5, padx=5, sticky="w")
+
+# Step 11.3: Create Usernames File Label
+ttk.Label(reverseBruteForceFrame, text="Usernames File:", font=("Courier New", 12)).grid(row=3, column=0, pady=5, padx=5, sticky="w")
+
+# Step 11.4: Create Usernames File Entry
+usernamesFileEntry = ttk.Entry(reverseBruteForceFrame, width=40, font=("Consolas", 12), background="#151525", foreground="red")
+usernamesFileEntry.grid(row=3, column=1, pady=5, padx=5, sticky="w")
+
+# Step 11.5: Create Username File Browse Button
+ttk.Button(reverseBruteForceFrame, text="Browse", style="TButton").grid(row=3, column=2, pady=5, padx=5, sticky="w")
+
+# Step 11.6: Create Passwords File Label
+ttk.Label(reverseBruteForceFrame, text="Common Passwords File:",
+          font=("Courier New", 12)).grid(row=4, column=0, pady=5, padx=5, sticky="w")
+
+# Step 11.7: Create Passwords File Entry
+commonPasswordFileEntry = ttk.Entry(reverseBruteForceFrame, width=40,
+                                    font=("Consolas", 12), background="#151525", foreground="red")
+commonPasswordFileEntry.grid(row=4, column=1, pady=5, padx=5, sticky="w")
+
+# Step 11.8: Create Browse Password File Button
+ttk.Button(reverseBruteForceFrame, text="Browse", style="TButton").grid(row=4, column=2, pady=5, padx=5, sticky="w")
 
 
-
-
+""" Step 12: Add the Run, Stop and Clear Buttons """
 
 
 
