@@ -15,3 +15,29 @@ init()
 
 """ Step 2: Setup logging configuration """
 logging.basicConfig(filename="yakuza_cracker.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+""" Step 3: Define global variables """
+
+# stopFlag used to stop the cracking process
+stopFlag = False
+
+# result's list use to store the cracked(founded) passwords
+results = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
