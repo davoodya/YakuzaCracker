@@ -93,10 +93,28 @@ attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
 attackTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 
 
+""" Step 8: Add the file type selection frame """
+# Create ttk.Frame with TFrame style
+fileTypeFrame = ttk.Frame(mainFrame, style="TFrame")
 
+# Create Label for file type selection
+fileTypeLabel = Label(fileTypeFrame, text="Select File Type:", font=("Courier New", 12))
 
+# Set Label Position on the UI
+fileTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
 
+# Create StringVar to store the first item of Combo Box => 'zip'
+fileTypeVar = StringVar(value="zip")
 
+# Create Combo Box in the fileTypeFrame with fileTypeVar(zip)
+fileTypeMenu = ttk.Combobox(fileTypeFrame, textvariable=fileTypeVar, state="readonly", font=("Consolas", 12))
+
+# Create other Value's of Combo Box
+fileTypeMenu["values"] = ("zip", "xls", "doc", "pdf")
+
+# Set Position of fileTypeMenu and fileTypeFrame
+fileTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
+fileTypeFrame.grid(row=1, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
 
 
