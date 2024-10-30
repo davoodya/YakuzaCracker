@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Update workspace.xml">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="fix last">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
@@ -78,14 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730218992285</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Prepare All packages for developing">
-      <option name="closed" value="true" />
-      <created>1730220174381</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1730220174381</updated>
     </task>
     <task id="LOCAL-00002" summary="Update requirements.txt to fix a new version of modules">
       <option name="closed" value="true" />
@@ -463,7 +455,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730319735341</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Implement Step 11: Define a function to read file lines with fallback encoding and error handling">
+      <option name="closed" value="true" />
+      <created>1730320464248</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1730320464248</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix last">
+      <option name="closed" value="true" />
+      <created>1730320474182</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1730320474182</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,8 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing Step 10: Add the Dictionary Attack Configuration Frame Completed" />
-    <MESSAGE value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
     <MESSAGE value="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed" />
     <MESSAGE value="Implementing Step 12: Add the Run, Stop and Clear Buttons" />
     <MESSAGE value="Implementing Step 13: Create the Progress Display and Output Display" />
@@ -503,6 +509,8 @@
     <MESSAGE value="add test execution block to test my codes easily" />
     <MESSAGE value="add yakuza_cracker.log which stores YakuzaCracker Logs" />
     <MESSAGE value="Update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
+    <MESSAGE value="Implement Step 11: Define a function to read file lines with fallback encoding and error handling" />
+    <MESSAGE value="fix last" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix last" />
   </component>
 </project>
