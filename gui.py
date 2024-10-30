@@ -255,6 +255,11 @@ etaLabel.pack()
 
 
 """ Step 14: Set the column configurations """
+root.grid_columnconfigure(0, weight=1)
+mainFrame.grid_columnconfigure(0, weight=1)
+mainFrame.grid_columnconfigure(1, weight=1)
+mainFrame.grid_columnconfigure(2, weight=1)
+outputFrame.grid_columnconfigure(0, weight=1)
 
 
 
@@ -263,12 +268,6 @@ etaLabel.pack()
 
 
 
-
-# For testing
-if __name__ == "__main__":
-    root.update_idletasks()
-    root.minsize(root.winfo_width(), root.winfo_height())
-    root.mainloop()
 
 
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implementing Step 12: Add the Run, Stop and Clear Buttons">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Start Implementing Step 14: Set the column configurations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
@@ -278,7 +278,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730306467405</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Implementing Step 13: Create the Progress Display and Output Display">
+      <option name="closed" value="true" />
+      <created>1730307892619</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730307892619</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add the main execution with Fixed UI Sizing using root.update_idletasks() and root.minsize()">
+      <option name="closed" value="true" />
+      <created>1730307942643</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730307942643</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Start Implementing Step 14: Set the column configurations">
+      <option name="closed" value="true" />
+      <created>1730308793145</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1730308793145</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,7 +317,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Prepare All packages for developing" />
     <MESSAGE value="Update requirements.txt to fix a new version of modules" />
     <MESSAGE value="Add gui.py and gui.txt to implement Layout of Main UI" />
     <MESSAGE value="Start Developing GUI Layout" />
@@ -316,6 +339,9 @@
     <MESSAGE value="Start Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame" />
     <MESSAGE value="Implementing Step 11: Add the Reverse Bruteforce Attack Configuration Frame Completed" />
     <MESSAGE value="Implementing Step 12: Add the Run, Stop and Clear Buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Step 12: Add the Run, Stop and Clear Buttons" />
+    <MESSAGE value="Implementing Step 13: Create the Progress Display and Output Display" />
+    <MESSAGE value="add the main execution with Fixed UI Sizing using root.update_idletasks() and root.minsize()" />
+    <MESSAGE value="Start Implementing Step 14: Set the column configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Implementing Step 14: Set the column configurations" />
   </component>
 </project>
