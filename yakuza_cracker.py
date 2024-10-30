@@ -3,6 +3,7 @@
 
 Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
+from gui import progressVar
 
 """ Section 1: Import all Requires Libraries and Basic Configurations """
 
@@ -155,6 +156,17 @@ def read_file_lines(file_path):
             continue
 
     raise ValueError(f"Failed to decode file {file_path} with tried encodings.")
+
+
+
+""" Section 3: UI Update Functions"""
+# Step 12: Define a function to update the progress message
+def update_progress(message):
+    progressVar.set(message)
+
+
+
+
 
 
 
