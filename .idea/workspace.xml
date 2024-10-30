@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 3: Define global variables" />
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -363,7 +366,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730315426676</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Start Developing Section 2: Developing Utility Functions">
+      <option name="closed" value="true" />
+      <created>1730315759847</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1730315759847</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller">
+      <option name="closed" value="true" />
+      <created>1730315875574</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1730315875574</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,8 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add some doc strings" />
-    <MESSAGE value="Implement Step 4: Set the Icon for the Window" />
     <MESSAGE value="Implement Step 5: Create the Main Frame" />
     <MESSAGE value="add logo.png file use as GUI Icon" />
     <MESSAGE value="Implement Step 6: Configure styles for the UI components" />
@@ -403,6 +420,8 @@
     <MESSAGE value="Implement Step 1: Initialize colorama for colored console output" />
     <MESSAGE value="Implement Step 2: Setup logging configuration" />
     <MESSAGE value="Implement Step 3: Define global variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 3: Define global variables" />
+    <MESSAGE value="Start Developing Section 2: Developing Utility Functions" />
+    <MESSAGE value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
   </component>
 </project>
