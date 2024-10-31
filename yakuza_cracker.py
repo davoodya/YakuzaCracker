@@ -22,6 +22,10 @@ from PyPDF2 import PdfReader
 from PIL import Image, ImageTk
 from time import time
 from tabulate import tabulate
+from string import ascii_lowercase
+from tqdm import tqdm
+from itertools import product
+
 
 # Step 4 from Part2: Function to Get the Path to Bundled Resources in PyInstaller
 def resource_path(relative_path):
@@ -489,6 +493,110 @@ def clear_attack():
 
 
 """ Section 4: Define Attack Functions """
+
+# Step 14: Define Bruteforce Attack Function
+def brute_force_attack(file_path, file_type, max_length=6, charset=ascii_lowercase):
+    global results
+
+    try:
+        # Initialize Variables needs for Attack
+        startTime = time()      #Record the start time
+        attemptCounter = 0      #Initialize the attempt counter
+        results = []            #Initialize the result list
+
+        # Calculate Total Attempts
+        totalAttempts = sum(len(charset) ** i for i in range(1, max_length + 1))
+
+        # Open Progress Bar synced to Bruteforce Attack
+        with tqdm(total=totalAttempts, desc="Bruteforce Progress", unit="attempt", dynamic_ncols=True) as pbar:
+
+            # iterate through each password length
+            for length in range(1, max_length + 1):
+
+                # Generate all combinations of the given length to try as Password
+                for attempt in product(charset, repeat=length):
+
+                    # Check if the stop flag is set, update progress bar and submit log, then call summary_result()
+                    if stopFlag:
+                        update_progress("Progress Interrupted by the User.")
+                        logging.info("[+] Progress Interrupted by the User.")
+                        summary_results()
+                        return None
+
+                    # Join the characters to form a password & Increment the attempt counter
+                    password = ''.join(attempt)
+                    attemptCounter += 1
+
+                    # Try the generated password with try_password()
+                    if try_password(file_path, file_type, password):
+                        endTime = time()    # Record the end time
+
+                        # Append successful password attempts to the result list
+                        results.append([attemptCounter, password, "Success"])
+
+                        # Create table from founded passwords(Result list)
+                        table = tabulate(results, headers=["Attempt", "Password", "Status"], tablefmt="grid")
+
+                        # Update Log and Result Logs with founded password table
+                        update_log(table)
+                        update_result_log(f"Password found: {password} for file: {file_path}\nTime taken: "
+                                          f"{endTime - startTime} seconds\nAttempts made: {attemptCounter}", success=True)
+
+                        # Submit log for finding password, time taken, max attempts
+                        logging.info(f"[+] Password found: {password}")
+                        logging.info(f"[+] Time taken: {endTime - startTime} seconds")
+                        logging.info(f"[+] Attempts made: {attemptCounter}")
+
+                        # Update Progress Bar, ETA Label, idletask and return password
+                        update_progress_bar(totalAttempts, totalAttempts, startTime)
+                        etaLabel.config(text="Estimated Time Remaining: 0 min 0 sec")
+                        root.update_idletasks()
+                        return password
+
+                    # Update the progress bar
+                    pbar.update(1)
+
+                    # Append unsuccessful attempt
+                    results.append([attemptCounter, password, "Unsuccessful"])
+
+                    # Create table from last 100 attempts to submit it into Log Section
+                    table = tabulate(results[-100:], headers=["Attempt", "Password", "Status"], tablefmt="grid")
+                    update_log(table)
+
+                    # Update the Progress bar
+                    update_progress_bar(attemptCounter, totalAttempts, startTime)
+                    root.update_idletasks()
+
+        # if password not founded, update_results_log, Submit Log & update progress bar
+        update_result_log("[-] Password not found.")
+        logging.info("[-] Password not found.")
+        update_progress_bar(totalAttempts, totalAttempts, startTime)
+
+    # Handle CTRL+C(KeyboardInterrupt) to Stop Process & call summary_results()
+    except KeyboardInterrupt:
+        update_progress("Process interrupted by user.")
+        logging.info("[+] Process interrupted by user.")
+        summary_results()
+
+    return None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
