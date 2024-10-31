@@ -23,8 +23,6 @@ from PIL import Image, ImageTk
 from time import time
 from tabulate import tabulate
 
-""" Part 1: Building GUI Functions and Other Objects"""
-
 # Step 4 from Part2: Function to Get the Path to Bundled Resources in PyInstaller
 def resource_path(relative_path):
     try:
@@ -42,6 +40,9 @@ def resource_path(relative_path):
         basePath = path.abspath(".")
 
     return path.join(basePath, relative_path)
+
+
+""" Part 1: Building GUI Functions and Other Objects"""
 
 # Step 2: Initialize the Main Window
 root = Tk()
@@ -484,6 +485,10 @@ def clear_attack():
 
     # Submit Log for Reinitialization
     logging.info("[+] Attack Cleared, All Objects Reinitialized.")
+
+
+
+""" Section 4: Define Attack Functions """
 
 
 
