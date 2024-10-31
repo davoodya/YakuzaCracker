@@ -10,6 +10,8 @@ Last Update: 29/10/2024 --- 8 aban 1403"""
 import sys
 import logging
 import sys
+from asyncio import as_completed
+from concurrent.futures.thread import ThreadPoolExecutor
 
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X, END
 
@@ -579,6 +581,132 @@ def brute_force_attack(file_path, file_type, max_length=6, charset=ascii_lowerca
         summary_results()
 
     return None
+
+
+# Step 15: Define the dictionary attack function
+def dictionary_attack(file_path, file_type, dictionary_file):
+    global results
+
+    try:
+        # Initialize Variables needs for Attack
+        startTime = time()      #Record the start time
+        attemptCounter = 0      #Initialize the attempt counter
+        results = []            #Initialize the result list
+
+        # try to Read passwords from the dictionary file with Error Handling
+        try:
+            password = read_file_lines(dictionary_file)
+        except FileNotFoundError:
+            update_progress(f"[-] Dictionary file '{dictionary_file}' not found.")
+            logging.info(f"[-] Dictionary file '{dictionary_file}' not found.")
+            return None
+        except ValueError as e:
+            update_progress(f"[-] Value Error: {str(e)}")
+            logging.info(f"[-] Value Error: {str(e)}")
+            return None
+
+        # Calculate total attempts and Initialize the password founded flag
+        totalAttempts = len(password)
+        passwordFound = False
+
+        # Create Thread Pool to Perform Multithreading Attack
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            futures = []
+
+            # Open Progress Bar
+            with tqdm(total=totalAttempts, desc="Dictionary Attack Progress", unit="attempt", dynamic_ncols=True) as pbar:
+                # Process passwords in batches of 10
+                for i in range(0, totalAttempts, 10):
+                    # if password is founded or stop flag is set break loop
+                    if passwordFound or stopFlag:
+                        break
+
+                    batch = password[i:i + 10]
+
+                    # Create the executor and submit it, then append future to it
+                    future = executor.submit(attempt_passwords, file_path, file_type, batch, results, i)
+                    futures.append(future)
+
+                    # Increment the attempt counter by batch size and update progress bar
+                    attemptCounter += len(batch)
+                    pbar.update(len(batch))
+
+                    # Append Unsuccessful Attempts to results list
+                    results.extend([[i + j, pw, "Unsuccessful"] for j, pw in enumerate(batch)])
+
+                    # Create table from Founded Password and Update Log with table
+                    table = tabulate(results[-100:], headers=["Attempt", "Password", "Status"], tablefmt="grid")
+
+                    # Update Log with table, Progress Bar & Update idletask
+                    update_log(table)
+                    update_progress_bar(attemptCounter, totalAttempts, startTime)
+                    root.update_idletasks()
+
+                # Check results of futures
+                for future in as_completed(futures):
+                    password = future.result()
+
+                    # Check if password founded
+                    if password:
+                        # Set password found flag
+                        passwordFound = True # noqa
+                        endTime = time()    # Record the end time
+
+                        # Append successful attempt
+                        results.append([attemptCounter, password, "Success"])
+
+                        # Create table from founded passwords
+                        table = tabulate(results, headers=["Attempt", "Password", "Status"], tablefmt="grid")
+
+                        # Update log & results Log sections
+                        update_log(table)
+                        update_result_log(f"Password found: {password} for file: {file_path}\nTime taken: "
+                                          f"{endTime - startTime} seconds\nAttempts made: {attemptCounter}", success=True)
+
+                        # Submit Logs for founded password, times taken, Attempts made, Estimated Remaining Time
+                        logging.info(f"[+] Password found: {password}")
+                        logging.info(f"[+] Time taken: {endTime - startTime} seconds")
+                        logging.info(f"[+] Attempts made: {attemptCounter}")
+
+                        # Update Progress bar, ETA Label, idletask and return password
+                        update_progress_bar(totalAttempts, totalAttempts, startTime)
+                        etaLabel.config(text="Estimated Time Remaining: 0 min 0 sec")
+                        root.update_idletasks()
+                        return password
+
+                    # if stop flag set, calling summary_results()
+                    if stopFlag:
+                        summary_results()
+                        return None
+                    # Increment the attempt counter
+                    attemptCounter += 1
+
+                    # Update progress bar
+                    pbar.set_postfix({"Attempts": attemptCounter})
+
+                    # Create table and Update Log with table
+                    table = tabulate(results[-100:], headers=["Attempt", "Password", "Status"], tablefmt="grid")
+                    update_log(table)
+
+                    # Update Progress bar and idletask
+                    update_progress_bar(attemptCounter, totalAttempts, startTime)
+                    root.update_idletasks()
+
+        # If password not found, first update Results Log then submit logging and update Progress Bar
+        update_result_log("[-] Password not found.")
+        logging.info("[-] Password not found.")
+        update_progress_bar(totalAttempts, totalAttempts, startTime)
+
+    # Handle CTRL+C(KeyboardInterrupt) for Canceling Attack
+    except KeyboardInterrupt:
+        # If CTRL+C pressed, Update progress bar and submit log info, finally call summary_result()
+        update_progress("Process interrupted by user.")
+        logging.info("[+] Process interrupted by user.")
+        summary_results()
+
+    return None
+
+
 
 
 
