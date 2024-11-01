@@ -5,27 +5,31 @@ Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
 
 
-#Step 1: Import all Requires Libraries
-
+# Step 1: Import all Requires Libraries
+# Internal Modules
 import sys
+from os import path
+from time import time
+from string import ascii_lowercase
+from io import BytesIO
 import logging
-import sys
+import requests
+import threading
+from itertools import product
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X, END
 
-from colorama import init
-from os import path
+# External Modules
 from msoffcrypto import OfficeFile
-from io import BytesIO
 from pyzipper import AESZipFile
 from PyPDF2 import PdfReader
-from PIL import Image, ImageTk
-from time import time
-from tabulate import tabulate
-from string import ascii_lowercase
+from colorama import init
 from tqdm import tqdm
-from itertools import product
+from tabulate import tabulate
+from PIL import Image, ImageTk
+
+
 
 
 # Step 4 from Part2: Function to Get the Path to Bundled Resources in PyInstaller
@@ -616,7 +620,7 @@ def dictionary_attack(file_path, file_type, dictionary_file):
             with tqdm(total=totalAttempts, desc="Dictionary Attack Progress", unit="attempt", dynamic_ncols=True) as pbar:
                 # Process passwords in batches of 10
                 for i in range(0, totalAttempts, 10):
-                    # if password is founded or stop a flag is set break loop
+                    # if a password is founded or stop a flag is set break loop
                     if passwordFound or stopFlag:
                         break
 
