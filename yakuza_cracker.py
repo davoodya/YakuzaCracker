@@ -645,6 +645,12 @@ def update_ui():
     elif attackType == 'reverse_brute_force':
         reverseBruteForceFrame.grid(row=2, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
+    # Update the UI to reflect the changes
+    root.update_idletasks()
+
+    # Adjust the window size to fit the new layout
+    root.geometry("")
+
 
 # Step 18: Define a function to open a file dialog to select a file
 def browse_file(entry):
@@ -994,8 +1000,6 @@ if __name__ == "__main__":
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
     # Step 34.3: Handle the Automatic Window Resizing
-
-    root.minsize(root.winfo_width(), root.winfo_height())
 
     # Step 34.4: Start the main loop
     root.mainloop()
