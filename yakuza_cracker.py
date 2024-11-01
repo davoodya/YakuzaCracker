@@ -13,7 +13,7 @@ from time import time
 from string import ascii_lowercase
 from io import BytesIO
 import logging
-import threading
+from threading import Thread
 from itertools import product
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -890,7 +890,71 @@ def browse_file(entry):
 
 # Step 19: Define a function to run the selected attack
 def run_attack():
+
+    # define global variables and reinitialize variables
     global stopFlag, results
+    stopFlag = False
+    results = []
+
+    # get selected attack type and file type from UI
+    attackType = attackTypeVar.get()
+    fileType = fileTypeVar.get()
+
+    # if attack type is brute_force or dictionary
+    if attackType in ['brute_force', 'dictionary']:
+        filePath = filePathEntry.get() if attackType == 'brute_force' else filePathEntryDict.get()
+
+        # Check filePath is Invalid then update Progress Section and return
+        if not filePath or not path.isfile(filePath):
+            update_progress("[-] Invalid File Path.")
+            return
+
+    # if attack type is brute_force
+    if attackType == 'brute_force':
+        # try to get max length from max length entry
+        try:
+            maxLength = int(maxLengthEntry.get())
+
+        # except max length is not numeric
+        except ValueError:
+            update_progress("[-] Invalid maximum length. Please enter a numeric value.")
+            return
+
+        # Get charset from charset entry and if no charset submit, then use the all alphabetic lowercase charset
+        charset = charsetEntry.get() or ascii_lowercase
+
+        # Execute brute_force() function with Multithreading
+        Thread(target=brute_force_attack, args=(filePath, fileType, maxLength, charset)).start()
+
+    # elif dictionary attack Selected
+    elif attackType == 'dictionary':
+        dictionaryFile = dictionaryFileEntry.get()
+
+        # if the dictionary file is Invalid, Update the Progress Section and return
+        if not dictionaryFile or not path.isfile(dictionaryFile):
+            update_progress("[-] Invalid dictionary file path.")
+            return
+
+        # Execute dictionary_attack() function with Multithreading
+        Thread(target=dictionary_attack, args=(filePath, fileType, dictionaryFile)).start()
+
+    # elif reverse bruteforce attack selected
+    elif attackType == 'reverse_brute_force':
+        # Read the URL, Username Filepath and Common Password Filepath from entries
+        url = urlEntry.get()
+        usernameFile = usernamesFileEntry.get()
+        commonPasswordFile = commonPasswordFileEntry.get()
+
+        # if the username file, common password file or submitted URL is wrong, update the Progress Section and return
+        if (not url or not usernameFile or not path.isfile(usernameFile)
+                or not commonPasswordFile or not path.isfile(commonPasswordFile)):
+
+            update_progress("[-] Invalid input. Please ensure all fields are filled correctly.")
+            return
+
+        # Execute reverse_brute_force() function with Multithreading
+        Thread(target=reverse_brute_force, args=(url, usernameFile, commonPasswordFile)).start()
+
 
 
 
