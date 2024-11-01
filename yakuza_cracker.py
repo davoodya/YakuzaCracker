@@ -738,7 +738,7 @@ def on_closing():
 # Step 22: Initialize the main window
 root = Tk()
 root.title("Yakuza Cracker")
-root.geometry("800x700")
+# root.geometry("800x700")
 
 
 # Step 23: Set the icon for the window
@@ -993,8 +993,8 @@ if __name__ == "__main__":
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
     # Step 34.3: Handle the Automatic Window Resizing
-    # root.update_idletasks()
-    # root.minsize(root.winfo_width(), root.winfo_height())
+    root.update_idletasks()
+    root.minsize(root.winfo_width(), root.winfo_height())
 
     # Step 34.4: Start the main loop
     root.mainloop()
