@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Update workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,22 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730218992285</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Implement Step 7: Add the attack type selection components">
-      <option name="closed" value="true" />
-      <created>1730300726260</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1730300726260</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Implement Step 8: Add the file type selection frame">
-      <option name="closed" value="true" />
-      <created>1730302166997</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1730302166997</updated>
     </task>
     <task id="LOCAL-00018" summary="Start Implementing Step 9: Add the brute force configuration frame">
       <option name="closed" value="true" />
@@ -471,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730383230945</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Implementing Step 15: Define the dictionary attack function">
+      <option name="closed" value="true" />
+      <created>1730388645517</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1730388645517</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1730388665288</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1730388665288</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start Developing Section 2: Developing Utility Functions" />
     <MESSAGE value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
     <MESSAGE value="Implement Step 5: Function to Try a Password on Different File Types" />
     <MESSAGE value="Implement Step 6: Define a function to try passwords on MS Office files" />
@@ -510,6 +508,7 @@
     <MESSAGE value="Fix some warnings" />
     <MESSAGE value="Start developing Section 4: Define Attack Functions" />
     <MESSAGE value="Implement Step 14: Define brute_force_attack() Function to Perform Bruteforce Attack for Cracking Files" />
+    <MESSAGE value="Implementing Step 15: Define the dictionary attack function" />
     <MESSAGE value="Update workspace.xml" />
     <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
   </component>
