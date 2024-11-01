@@ -992,12 +992,16 @@ if __name__ == "__main__":
     # Step 34.2: Handle the window closing event
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
-    # Step 34.3: Handle Automatic Window Resizing
+    # Step 34.3: Handle the Automatic Window Resizing
     # root.update_idletasks()
     # root.minsize(root.winfo_width(), root.winfo_height())
 
     # Step 34.4: Start the main loop
     root.mainloop()
+
+    """ Developing of version 1.0.1 is Complete,
+        this version is full code of Yakuza Cracker development without testing """
+
 
 
 
