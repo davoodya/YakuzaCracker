@@ -857,7 +857,32 @@ def reverse_brute_force(url, username_file, common_password_file):
 
 # Step 17: Define a function to update the UI based on the selected attack type
 def update_ui():
-    pass
+    # Get Selected Attack type from Selected Box
+    attackType = attackTypeVar.get()
+
+    # Grid Remove All Attack frames to reinitialize frames again with selected attack
+    fileTypeFrame.grid_remove()
+    bruteForceFrame.grid_remove()
+    dictionaryFrame.grid_remove()
+    reverseBruteForceFrame.grid_remove()
+
+    # if attack type is brute_force or dictionary
+    if attackType in ['brute_force', 'dictionary']:
+        fileTypeFrame.grid(row=1, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
+
+    # if attack type is brute_force
+    if attackType == 'brute_force':
+        bruteForceFrame.grid(row=2, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
+
+    # elif attack type is dictionary
+    elif attackType == 'dictionary':
+        dictionaryFrame.grid(row=2, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
+
+    # elif attack type is reverse_brute_force
+    elif attackType == 'reverse_brute_force':
+        reverseBruteForceFrame.grid(row=2, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
+
+
 
 
 
