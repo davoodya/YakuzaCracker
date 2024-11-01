@@ -10,8 +10,7 @@ Last Update: 29/10/2024 --- 8 aban 1403"""
 import sys
 import logging
 import sys
-from asyncio import as_completed
-from concurrent.futures.thread import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X, END
 
@@ -561,7 +560,7 @@ def brute_force_attack(file_path, file_type, max_length=6, charset=ascii_lowerca
                     # Append unsuccessful attempt
                     results.append([attemptCounter, password, "Unsuccessful"])
 
-                    # Create table from last 100 attempts to submit it into Log Section
+                    # Create table from the last 100 attempts to submit it into Log Section
                     table = tabulate(results[-100:], headers=["Attempt", "Password", "Status"], tablefmt="grid")
                     update_log(table)
 
@@ -617,7 +616,7 @@ def dictionary_attack(file_path, file_type, dictionary_file):
             with tqdm(total=totalAttempts, desc="Dictionary Attack Progress", unit="attempt", dynamic_ncols=True) as pbar:
                 # Process passwords in batches of 10
                 for i in range(0, totalAttempts, 10):
-                    # if password is founded or stop flag is set break loop
+                    # if password is founded or stop a flag is set break loop
                     if passwordFound or stopFlag:
                         break
 
