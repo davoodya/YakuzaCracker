@@ -496,7 +496,6 @@ def clear_attack():
     logging.info("[+] Attack Cleared, All Objects Reinitialized.")
 
 
-
 """ Section 4: Define Attack Functions """
 
 # Step 14: Define Bruteforce Attack Function
@@ -710,6 +709,10 @@ def dictionary_attack(file_path, file_type, dictionary_file):
     return None
 
 
+# Step 16: Define the reverse brute force attack function
+def reverse_brute_force(url, username_file, common_password_file):
+    global results
+    foundLogins = []
 
 
 

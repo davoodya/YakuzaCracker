@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="Update workspace.xml">
+    <list default="true" id="dc33a34f-e0b6-45ea-91da-aa06c7537530" name="Changes" comment="update workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yakuza_cracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/yakuza_cracker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,30 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730218992285</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Start Implementing Step 9: Add the brute force configuration frame">
-      <option name="closed" value="true" />
-      <created>1730302235637</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1730302235637</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Update gitignore to avoid pushing IDE Files">
-      <option name="closed" value="true" />
-      <created>1730302281731</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1730302281731</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Implementing Step 9: Add the brute force configuration frame Completed">
-      <option name="closed" value="true" />
-      <created>1730305039978</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1730305039978</updated>
     </task>
     <task id="LOCAL-00021" summary="Start Implementing Step 10: Add the Dictionary Attack Configuration Frame">
       <option name="closed" value="true" />
@@ -470,7 +447,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730388665288</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="fix some warnings">
+      <option name="closed" value="true" />
+      <created>1730468144672</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1730468144672</updated>
+    </task>
+    <task id="LOCAL-00068" summary="arranged the import section">
+      <option name="closed" value="true" />
+      <created>1730468451158</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1730468451158</updated>
+    </task>
+    <task id="LOCAL-00069" summary="update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1730468462423</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1730468462423</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,8 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Step 4: Function to Get the Path to Bundled Resources in PyInstaller" />
-    <MESSAGE value="Implement Step 5: Function to Try a Password on Different File Types" />
     <MESSAGE value="Implement Step 6: Define a function to try passwords on MS Office files" />
     <MESSAGE value="Implement Step 7: Define a function to try passwords on ZIP files" />
     <MESSAGE value="Implement Step 8: Function to try passwords on PDF files" />
@@ -504,12 +503,14 @@
     <MESSAGE value="Implement Step 12.3: Define update_progress_bar() function to update the progress bar and ETA Label" />
     <MESSAGE value="Implement Step 12.4: Define summary_results() function to summarize the results and update the log" />
     <MESSAGE value="Implement Step 12.5: Define clear_attack() function to clear the attack results and reset the UI" />
-    <MESSAGE value="update workspace.xml" />
     <MESSAGE value="Fix some warnings" />
     <MESSAGE value="Start developing Section 4: Define Attack Functions" />
     <MESSAGE value="Implement Step 14: Define brute_force_attack() Function to Perform Bruteforce Attack for Cracking Files" />
     <MESSAGE value="Implementing Step 15: Define the dictionary attack function" />
     <MESSAGE value="Update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml" />
+    <MESSAGE value="fix some warnings" />
+    <MESSAGE value="arranged the import section" />
+    <MESSAGE value="update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml" />
   </component>
 </project>
