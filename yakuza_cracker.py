@@ -792,10 +792,16 @@ style.configure("TFrame", background=bg_color)
 style.configure("TButton", background=button_bg_color, foreground=button_fg_color,
                 bordercolor=border_color, focusthickness=3, focuscolor="None", font=("Hack", 12))
 
+# Add some transition effects for Buttons
+style.map("TButton",
+          background=[("active", "#333333")],
+          foreground=[("active", "orange")])
+
 # Configure the style for Horizontal Progressbar
 style.configure("Green.Horizontal.TProgressbar", troughcolor=progress_bg_color, background=progress_fg_color, bordercolor=bg_color)
 
 # Configure Styles for ComboBox
+# Configure the style for Combobox
 # Configure the style for Combobox
 style.configure("TCombobox",
                 fieldbackground=bg_color,  # Background color of the combobox field
@@ -807,11 +813,6 @@ style.configure("TCombobox",
                 bordercolor=border_color,  # Border color
                 font=("Consolas", 12))  # Font
 
-# Add some transition effects for Buttons
-style.map("TButton",
-          background=[("active", "#333333")],
-          foreground=[("active", "orange")])
-
 # Add transition effects for Combobox
 style.map("TCombobox",
           fieldbackground=[("readonly", bg_color)],  # Background color when readonly
@@ -820,6 +821,7 @@ style.map("TCombobox",
           selectbackground=[("readonly", button_bg_color)],  # Background color of the selected item when readonly
           selectforeground=[("readonly", fg_color)],  # Text color of the selected item when readonly
           arrowcolor=[("readonly", fg_color)])  # Color of the dropdown arrow when readonly
+
 
 
 # Step 26: Add the attack type selection components
