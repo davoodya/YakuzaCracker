@@ -795,10 +795,31 @@ style.configure("TButton", background=button_bg_color, foreground=button_fg_colo
 # Configure the style for Horizontal Progressbar
 style.configure("Green.Horizontal.TProgressbar", troughcolor=progress_bg_color, background=progress_fg_color, bordercolor=bg_color)
 
-# Add some transition effects
+# Configure Styles for ComboBox
+# Configure the style for Combobox
+style.configure("TCombobox",
+                fieldbackground=bg_color,  # Background color of the combobox field
+                background=button_bg_color,  # Background color of the dropdown button
+                foreground=fg_color,  # Text color
+                selectbackground=button_bg_color,  # Background color of the selected item
+                selectforeground=fg_color,  # Text color of the selected item
+                arrowcolor=fg_color,  # Color of the dropdown arrow
+                bordercolor=border_color,  # Border color
+                font=("Consolas", 12))  # Font
+
+# Add some transition effects for Buttons
 style.map("TButton",
           background=[("active", "#333333")],
-          foreground=[("active", "#FF4500")])
+          foreground=[("active", "orange")])
+
+# Add transition effects for Combobox
+style.map("TCombobox",
+          fieldbackground=[("readonly", bg_color)],  # Background color when readonly
+          background=[("readonly", button_bg_color)],  # Background color of the dropdown button when readonly
+          foreground=[("readonly", fg_color)],  # Text color when readonly
+          selectbackground=[("readonly", button_bg_color)],  # Background color of the selected item when readonly
+          selectforeground=[("readonly", fg_color)],  # Text color of the selected item when readonly
+          arrowcolor=[("readonly", fg_color)])  # Color of the dropdown arrow when readonly
 
 
 # Step 26: Add the attack type selection components
@@ -814,7 +835,8 @@ attackTypeLabel = ttk.Label(attackTypeFrame, text="Select Attack Type:", font=("
 attackTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
 
 # Step 26.4: Create new Combobox to show attack_type_var(brute_force) as first item
-attackTypeMenu = ttk.Combobox(attackTypeFrame, textvariable=attackTypeVar, state="readonly", font=("Consolas", 12))
+attackTypeMenu = ttk.Combobox(attackTypeFrame, textvariable=attackTypeVar, state="readonly",
+                              font=("Consolas", 12), style="TCombobox")
 
 # Step 26.5: Create Values of the Combobox
 attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
@@ -841,7 +863,8 @@ fileTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
 fileTypeVar = StringVar(value="zip")
 
 # Step 27.5: Create Combo Box in the fileTypeFrame with fileTypeVar(zip)
-fileTypeMenu = ttk.Combobox(fileTypeFrame, textvariable=fileTypeVar, state="readonly", font=("Consolas", 12))
+fileTypeMenu = ttk.Combobox(fileTypeFrame, textvariable=fileTypeVar, state="readonly",
+                            font=("Consolas", 12), style="TCombobox")
 
 # Step 27.6: Create other Value's of Combo Box
 fileTypeMenu["values"] = ("zip", "xls", "doc", "pdf")
