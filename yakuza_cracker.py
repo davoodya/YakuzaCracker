@@ -984,10 +984,19 @@ outputFrame.grid_columnconfigure(0, weight=1)
 
 
 
-# Step 15: Main Execution with Automatic Window Resizing
+# Step 34: Main Execution with Automatic Window Resizing
 if __name__ == "__main__":
+    # Step 34.1: Initialize the UI
+    update_ui()
+
+    # Step 34.2: Handle the window closing event
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+
+    # Step 34.3: Handle Automatic Window Resizing
     root.update_idletasks()
     root.minsize(root.winfo_width(), root.winfo_height())
+
+    # Step 34.4: Start the main loop
     root.mainloop()
 
 
