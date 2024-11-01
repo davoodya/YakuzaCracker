@@ -888,6 +888,10 @@ def browse_file(entry):
     entry.delete(0, END)
     entry.insert(0, filename)
 
+# Step 19: Define a function to run the selected attack
+def run_attack():
+    global stopFlag, results
+
 
 
 
