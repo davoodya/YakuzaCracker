@@ -963,6 +963,12 @@ def stop_attack():
     summary_results()
 
 
+# Step 21: Define a function to handle the window closing event
+def on_closing():
+    if messagebox.askokcancel("Quit", "Do you want to quit?"):
+        root.destroy()
+
+
 
 
 
