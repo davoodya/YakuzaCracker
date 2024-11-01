@@ -5,6 +5,8 @@ Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
 
 
+
+
 # Step 1: Import all Requires Libraries
 # Internal Modules
 import sys
@@ -15,7 +17,9 @@ from io import BytesIO
 import logging
 from threading import Thread
 from itertools import product
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, ProcessPoolExecutor
+from multiprocessing import Pool, Value, Manager, cpu_count
+from threading import Event
 
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X, END
 
@@ -28,6 +32,7 @@ from tqdm import tqdm
 from tabulate import tabulate
 from PIL import Image, ImageTk
 from requests import post
+
 
 
 
@@ -345,6 +350,82 @@ def brute_force_attack(file_path, file_type, max_length=6, charset=ascii_lowerca
 
     return None
 
+""" Plus-Section: Try to Implement Multithreading Bruteforce Attack - Start Point"""
+
+# Shared event to stop all processes once password is found
+stop_event = Event()
+
+def brute_force_attack_multithread(file_path, file_type, length_range, charset=ascii_lowercase):
+    global results
+
+    try:
+        start_time = time()
+        attempt_counter = 0
+        results = []
+
+        # Calculate total attempts for progress bar
+        total_attempts = sum(len(charset) ** i for i in length_range)
+
+        # Loop over each password length in assigned range
+        for length in length_range:
+            # Generate all password combinations for current length
+            for attempt in product(charset, repeat=length):
+                if stop_event.is_set():
+                    return None  # Stop if another process found the password
+
+                password = ''.join(attempt)
+                attempt_counter += 1
+
+                # Try generated password
+                if try_password(file_path, file_type, password):
+                    stop_event.set()  # Signal other processes to stop
+                    end_time = time()
+
+                    results.append([attempt_counter, password, "Success"])
+                    table = tabulate(results, headers=["Attempt", "Password", "Status"], tablefmt="grid")
+                    update_log(table)
+                    update_result_log(f"Password found: {password} for file: {file_path}\nTime taken: "
+                                      f"{end_time - start_time} seconds\nAttempts made: {attempt_counter}",
+                                      success=True)
+                    logging.info(f"[+] Password found: {password}")
+                    logging.info(f"[+] Time taken: {end_time - start_time} seconds")
+                    logging.info(f"[+] Attempts made: {attempt_counter}")
+                    return password  # Exit once password is found
+
+                results.append([attempt_counter, password, "Unsuccessful"])
+
+        if not stop_event.is_set():
+            update_result_log("[-] Password not found.")
+            logging.info("[-] Password not found.")
+
+    except KeyboardInterrupt:
+        logging.info("[+] Process interrupted by user.")
+    return None
+
+# Function to distribute workload across CPU cores
+def start_brute_force_attack(file_path, file_type, max_length=6, charset=ascii_lowercase):
+    # Ensure the step is at least 1 to avoid a zero step in the range function
+    step = max(1, max_length // cpu_count())
+
+    # Divide the workload across ranges based on the adjusted step
+    length_ranges = [
+        range(start, min(start + step, max_length + 1))
+        for start in range(1, max_length + 1, step)
+    ]
+
+    # Start processes with ProcessPoolExecutor
+    with ProcessPoolExecutor(max_workers=cpu_count()) as executor:
+        futures = [
+            executor.submit(brute_force_attack_multithread, file_path, file_type, length_range, charset)
+            for length_range in length_ranges
+        ]
+
+        # Wait for any future to complete
+        for future in futures:
+            if stop_event.is_set():
+                break
+
+""" Plus-Section: Try to Implement Multithreading Bruteforce Attack - End Point"""
 
 # Step 15: Define the dictionary attack function
 def dictionary_attack(file_path, file_type, dictionary_file):
@@ -615,7 +696,6 @@ def reverse_brute_force(url, username_file, common_password_file):
     return None
 
 
-
 """ Section 5: Implement Dynamic GUI Setup Function's """
 
 # Step 17: Define a function to update the UI based on the selected attack type
@@ -694,7 +774,8 @@ def run_attack():
         charset = charsetEntry.get() or ascii_lowercase
 
         # Execute brute_force() function with Multithreading
-        Thread(target=brute_force_attack, args=(filePath, fileType, maxLength, charset)).start()
+        # start_brute_force_attack(file_path=filePath, file_type=fileType, max_length=maxLength, charset=charset)
+        Thread(target=brute_force_attack, args=(filePath, fileType, maxLength, charset)).start() # noqa
 
     # elif dictionary attack Selected
     elif attackType == 'dictionary':
@@ -706,7 +787,7 @@ def run_attack():
             return
 
         # Execute dictionary_attack() function with Multithreading
-        Thread(target=dictionary_attack, args=(filePath, fileType, dictionaryFile)).start()
+        Thread(target=dictionary_attack, args=(filePath, fileType, dictionaryFile)).start() # noqa
 
     # elif reverse bruteforce attack selected
     elif attackType == 'reverse_brute_force':
