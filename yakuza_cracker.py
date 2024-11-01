@@ -882,6 +882,11 @@ def update_ui():
     elif attackType == 'reverse_brute_force':
         reverseBruteForceFrame.grid(row=2, column=0, columnspan=3, pady=5, padx=5, sticky="ew")
 
+# Step 18: Define a function to open a file dialog to select a file
+def browse_file(entry):
+    filename = filedialog.askopenfilename()
+    entry.delete(0, END)
+    entry.insert(0, filename)
 
 
 
