@@ -781,16 +781,17 @@ style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", backgroun
 # Step 26: Add the attack type selection components
 
 # Step 26.1: Create String Variable to store brute_force
+attackTypeFrame = ttk.Frame(mainFrame, style="TFrame")
 attackTypeVar = StringVar(value="brute_force")
 
 # Step 26.2: Create Label in main_frame with text => Select Attack Type:
-attackTypeLabel = Label(mainFrame, text="Select Attack Type:", font=("Courier New", 12))
+attackTypeLabel = Label(attackTypeFrame, text="Select Attack Type:", font=("Courier New", 12))
 
 # Step 26.3: Set Position of Label in the Main Frame
 attackTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
 
 # Step 26.4: Create new Combobox to show attack_type_var(brute_force) as first item
-attackTypeMenu = ttk.Combobox(mainFrame, textvariable=attackTypeVar, state="readonly", font=("Consolas", 12))
+attackTypeMenu = ttk.Combobox(attackTypeFrame, textvariable=attackTypeVar, state="readonly", font=("Consolas", 12))
 
 # Step 26.5: Create Values of the Combobox
 attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
@@ -798,9 +799,10 @@ attackTypeMenu["values"] = ("brute_force", "dictionary", "reverse_brute_force")
 # Step 26.6: Set position of Combobox in the Main Frame
 attackTypeMenu.grid(row=0, column=1, pady=5, padx=(0, 5), sticky="w")
 
+
 # Step 26.7: Bind item Changing in Combobox to update_ui() function
 attackTypeMenu.bind("<<ComboboxSelected>>", lambda e: update_ui())
-
+attackTypeFrame.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 
 # Step 27: Add the file type selection frame
 # Step 27.1: Create ttk.Frame with TFrame style
