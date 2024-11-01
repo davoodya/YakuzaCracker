@@ -25,7 +25,7 @@ import logging
 from threading import Thread
 from itertools import product
 from concurrent.futures import ThreadPoolExecutor, as_completed, ProcessPoolExecutor
-from multiprocessing import Pool, Value, Manager, cpu_count
+from multiprocessing import cpu_count
 from threading import Event
 
 from tkinter import ttk, filedialog, scrolledtext, messagebox, Tk, StringVar, Label, WORD, BOTH, HORIZONTAL, X, END
@@ -128,7 +128,7 @@ def try_pdf_password(file_path, password):
     # if the PDF file is encrypted, then decrypt it using the provided password
     if reader.is_encrypted:
         reader.decrypt(password)
-        reader.pages[0]
+        reader.pages[0] # noqa
         return True
 
     return False
@@ -371,7 +371,7 @@ def brute_force_attack_multithread(file_path, file_type, length_range, charset=a
         results = []
 
         # Calculate total attempts for progress bar
-        total_attempts = sum(len(charset) ** i for i in length_range)
+        total_attempts = sum(len(charset) ** i for i in length_range) # noqa
 
         # Loop over each password length in assigned range
         for length in length_range:
@@ -397,7 +397,7 @@ def brute_force_attack_multithread(file_path, file_type, length_range, charset=a
                     logging.info(f"[+] Password found: {password}")
                     logging.info(f"[+] Time taken: {end_time - start_time} seconds")
                     logging.info(f"[+] Attempts made: {attempt_counter}")
-                    return password  # Exit once password is found
+                    return password  # Exit once the password is found
 
                 results.append([attempt_counter, password, "Unsuccessful"])
 
@@ -428,7 +428,7 @@ def start_brute_force_attack(file_path, file_type, max_length=6, charset=ascii_l
         ]
 
         # Wait for any future to complete
-        for future in futures:
+        for future in futures: # noqa
             if stop_event.is_set():
                 break
 
