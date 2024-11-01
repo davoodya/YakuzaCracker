@@ -769,20 +769,36 @@ mainFrame.grid(row=0, column=0, sticky="nsew")
 
 # Step 25: Configure styles for the UI components
 # Step 25.1: Create style Instance
+# Set the theme colors
+bg_color = "#05050F"
+fg_color = "#FFD700"
+button_bg_color = "black"
+button_fg_color = "red"
+progress_bg_color = "#151525"
+progress_fg_color = "#00FF00"
+border_color = "#009933"
+
+# Configure the style for the application
 style = ttk.Style()
+style.theme_use("clam")  # Use a modern theme
 
-# Step 25.2: Configure new style for Labels in named TLabel
-style.configure("TLabel", background="#05050F", foreground="#FFD700")
+# Configure the style for Labels
+style.configure("TLabel", background=bg_color, foreground=fg_color, font=("Hack", 12))
 
-# Step 25.3: Configure new style for Frames in named TFrame
-style.configure("TFrame", background="#05050F")
+# Configure the style for Frames
+style.configure("TFrame", background=bg_color)
 
-# Step 25.4: Configure new style for Buttons in named TButton
-style.configure("TButton", background="black", foreground="red", bordercolor="#009933",
-                focusthickness=3, focuscolor="None")
+# Configure the style for Buttons
+style.configure("TButton", background=button_bg_color, foreground=button_fg_color,
+                bordercolor=border_color, focusthickness=3, focuscolor="None", font=("Hack", 12))
 
-# Step 25.5: Configure new style for Horizontal Progressbar in named Green.Horizontal.TProgressbar
-style.configure("Green.Horizontal.TProgressbar",troughcolor="#151525", background="#00FF00", bordercolor="05050F")
+# Configure the style for Horizontal Progressbar
+style.configure("Green.Horizontal.TProgressbar", troughcolor=progress_bg_color, background=progress_fg_color, bordercolor=bg_color)
+
+# Add some transition effects
+style.map("TButton",
+          background=[("active", "#333333")],
+          foreground=[("active", "#FF4500")])
 
 
 # Step 26: Add the attack type selection components
