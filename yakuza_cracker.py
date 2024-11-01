@@ -968,7 +968,7 @@ def on_closing():
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
         root.destroy()
 
-
+# Section 6: Main GUI Setup and Loop
 
 
 
