@@ -773,7 +773,7 @@ mainFrame.grid(row=0, column=0, sticky="nsew")
 bg_color = "#05050F"
 fg_color = "#FFD700"
 button_bg_color = "black"
-button_fg_color = "red"
+button_fg_color = "light green"
 progress_bg_color = "#151525"
 progress_fg_color = "#00FF00"
 border_color = "#009933"
@@ -808,7 +808,7 @@ attackTypeFrame = ttk.Frame(mainFrame, style="TFrame")
 attackTypeVar = StringVar(value="brute_force")
 
 # Step 26.2: Create Label in main_frame with text => Select Attack Type:
-attackTypeLabel = Label(attackTypeFrame, text="Select Attack Type:", font=("Courier New", 12))
+attackTypeLabel = ttk.Label(attackTypeFrame, text="Select Attack Type:", font=("Courier New", 12), style="TLabel")
 
 # Step 26.3: Set Position of Label in the Main Frame
 attackTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
@@ -832,7 +832,7 @@ attackTypeFrame.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 fileTypeFrame = ttk.Frame(mainFrame, style="TFrame")
 
 # Step 27.2: Create Label for file type selection
-fileTypeLabel = Label(fileTypeFrame, text="Select File Type:", font=("Courier New", 12))
+fileTypeLabel = ttk.Label(fileTypeFrame, text="Select File Type:", font=("Courier New", 12), style="TLabel")
 
 # Step 27.3: Set Label Position on the UI
 fileTypeLabel.grid(row=0, column=0, pady=5, padx=5, sticky="w")
