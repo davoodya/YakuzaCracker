@@ -4,7 +4,14 @@
 Author: Davood Yakuza from Iran, Isfahan
 Last Update: 29/10/2024 --- 8 aban 1403"""
 
-
+# TODO:
+#   0. Implement multithreading plus multiprocessing for Bruteforce, Dictionary, and Reverse Bruteforce Attacks
+#   1. Try to Increase the Speed of the All Cracking Attacks
+#   3. Implement File Type Detection for ZIP, RAR, and MS-Office Documents before Start Attack to sure file type is correct
+#   4. For now YakuzaCracker for MS_Office and PDF Files only Can Cracking 2012 to 2016 Office and Old PDF Files;
+#           - Try to Implement Cracking Support for Ms-Office 2016 and above versions, New PDF Formats
+#           - Application work ok for ZIP Files
+#   5. Try to Implement Cracking Support for RAR Files
 
 
 # Step 1: Import all Requires Libraries
