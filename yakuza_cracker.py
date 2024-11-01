@@ -955,6 +955,13 @@ def run_attack():
         # Execute reverse_brute_force() function with Multithreading
         Thread(target=reverse_brute_force, args=(url, usernameFile, commonPasswordFile)).start()
 
+# Step 20: Define a function to stop the current attack
+def stop_attack():
+    global stopFlag
+    stopFlag = True
+    update_progress("[-] Stopping the attack...")
+    summary_results()
+
 
 
 
