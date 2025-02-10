@@ -622,7 +622,7 @@ def reverse_brute_force(url, username_file, common_password_file):
                     #               firs check targets payload with condition, and then fill payload like
                     #               {'user': username, 'pass': password}
                     #Send login POST request with read username and the password as Payload Data
-                    response = post(url, data={'username': username, 'password': password})
+                    response = post(url, data={'username': username, 'password': password}, timeout=60)
 
 
                     # TODO: Add Some Conditions for Success Login Checking for example:
